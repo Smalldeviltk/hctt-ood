@@ -1,9 +1,0 @@
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\BusinessLogicTier\bin\Debug\BusinessLogicTier.dll
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\BusinessLogicTier\bin\Debug\BusinessLogicTier.pdb
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\BusinessLogicTier\obj\Debug\BusinessLogicTier.dll
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\BusinessLogicTier\obj\Debug\BusinessLogicTier.pdb
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\BusinessLogicTier\bin\Debug\DataAccessTier.dll
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\BusinessLogicTier\bin\Debug\DTO.dll
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\BusinessLogicTier\bin\Debug\DataAccessTier.pdb
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\BusinessLogicTier\bin\Debug\DTO.pdb
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\BusinessLogicTier\obj\Debug\BusinessLogicTier.csprojResolveAssemblyReference.cache
