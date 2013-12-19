@@ -1,4 +1,0 @@
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\DTO\bin\Debug\DTO.dll
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\DTO\bin\Debug\DTO.pdb
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\DTO\obj\Debug\DTO.dll
-D:\Working\My Code\OOD_Project\QuanLyNhaSach\DTO\obj\Debug\DTO.pdb
