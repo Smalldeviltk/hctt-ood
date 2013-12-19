@@ -1,0 +1,15 @@
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\bin\Debug\PresentationTier.exe
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\bin\Debug\PresentationTier.pdb
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\bin\Debug\BusinessLogicTier.dll
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\bin\Debug\DTO.dll
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\bin\Debug\DataAccessTier.dll
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\bin\Debug\BusinessLogicTier.pdb
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\bin\Debug\DTO.pdb
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\bin\Debug\DataAccessTier.pdb
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\obj\Debug\PresentationTier.csprojResolveAssemblyReference.cache
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\obj\Debug\PresentationTier.frmConnection.resources
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\obj\Debug\PresentationTier.Properties.Resources.resources
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\obj\Debug\PresentationTier.csproj.GenerateResource.Cache
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\obj\Debug\PresentationTier.exe
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\obj\Debug\PresentationTier.pdb
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\PresentationTier\obj\Debug\PresentationTier.frmMain.resources

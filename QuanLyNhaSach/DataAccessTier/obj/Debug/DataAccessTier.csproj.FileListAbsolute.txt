@@ -1,0 +1,7 @@
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\DataAccessTier\bin\Debug\DataAccessTier.dll
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\DataAccessTier\bin\Debug\DataAccessTier.pdb
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\DataAccessTier\bin\Debug\DTO.dll
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\DataAccessTier\bin\Debug\DTO.pdb
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\DataAccessTier\obj\Debug\DataAccessTier.csprojResolveAssemblyReference.cache
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\DataAccessTier\obj\Debug\DataAccessTier.dll
+D:\Working\My Code\OOD_Project\QuanLyNhaSach\DataAccessTier\obj\Debug\DataAccessTier.pdb
