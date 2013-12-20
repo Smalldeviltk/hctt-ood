@@ -92,9 +92,9 @@ namespace DTO
             set { _Loai = value; }
         }
 
-        public DateTime _NgaySinh;
+        public string _NgaySinh;
 
-        public DateTime NgaySinh
+        public string NgaySinh
         {
             get { return _NgaySinh; }
             set { _NgaySinh = value; }
