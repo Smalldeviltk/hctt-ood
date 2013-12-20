@@ -26,9 +26,17 @@ namespace DataAccessTier
         public SqlConnection GetConnect()
         {
             if (this.UserName != "")
-                return new SqlConnection("Data Source=" + this.Server + ";Initial Catalog=" + this.Database + ";User Id=" + this.UserName + ";Password=" + this.Password + ";");
+            {
+                SqlConnection cnn = new SqlConnection("Data Source=" + this.Server + ";Initial Catalog=" + this.Database + ";User Id=" + this.UserName + ";Password=" + this.Password + ";");
+                cnn.Open();
+                return cnn;
+            }
             else
-                return new SqlConnection("Data Source=" + this.Server + ";Initial Catalog=" + this.Database + ";Integrated Security=True");
+            {
+                SqlConnection cnn = new SqlConnection("Data Source=" + this.Server + ";Initial Catalog=" + this.Database + ";Integrated Security=True");
+                cnn.Open();
+                return cnn;
+            }
         }
         public static void WriteFile(string server, string data, string uid, string pass)
         {
@@ -38,6 +46,6 @@ namespace DataAccessTier
             writer.WriteLine("UserName:" + uid);
             writer.WriteLine("PassWord:" + pass);
             writer.Close();
-        }   
+        }
     }
 }
