@@ -24,8 +24,6 @@ namespace PresentationTier
             {
                 HelperBUS h = new HelperBUS();
                 SqlConnection con = h.GetConnect();
-                con.Open();
-                con.Close();
             }
             catch (Exception)
             {
@@ -34,9 +32,39 @@ namespace PresentationTier
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btTacGia_Click(object sender, EventArgs e)
         {
-
+            frmTacGia f = new frmTacGia();
+            f.ShowDialog();
         }
+
+        private void btNhanVien_Click(object sender, EventArgs e)
+        {
+            frmNhanVien f = new frmNhanVien();
+            f.ShowDialog();
+        }
+
+        private void btNhaCungCap_Click(object sender, EventArgs e)
+        {
+            frmNhaCungCap f = new frmNhaCungCap();
+            f.ShowDialog();
+        }
+
+        private void btNhaXuatBan_Click(object sender, EventArgs e)
+        {
+            frmNhaXuatBan f = new frmNhaXuatBan();
+            f.ShowDialog();
+        }
+
+        private void btTheLoai_Click(object sender, EventArgs e)
+        {
+            frmTheLoai f = new frmTheLoai();
+            f.ShowDialog();
+        }
+
+
+     
+
+
     }
 }
