@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HoaDonBUS.cs" />
+    <Compile Include="PhieuNhapBUS.cs" />
     <Compile Include="HelperBUS.cs" />
     <Compile Include="NhaCungCapBUS.cs" />
     <Compile Include="NhanVienBus.cs" />
