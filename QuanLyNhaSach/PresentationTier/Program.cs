@@ -15,7 +15,7 @@ namespace PresentationTier
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBaoCaoBanHang());
+            Application.Run(new frmThongKeSach());
         }
     }
 }

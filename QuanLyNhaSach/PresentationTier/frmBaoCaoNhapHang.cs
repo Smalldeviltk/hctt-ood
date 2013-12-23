@@ -30,10 +30,12 @@ namespace PresentationTier
         {
             /*frmReport.*/
             DataTable dt = bus.LaydsTheoNgay(dtpNNTu.Value,dtpNNDen.Value);
-            rptBaoCaoNhapHang rpt = new rptBaoCaoNhapHang();
+            Report.rptBaoCaoNhapHang rpt = new Report.rptBaoCaoNhapHang();
             //-----------
             rpt.SetDataSource(dt);
             frmReport f = new frmReport();
+            rpt.SetParameterValue("tu", dtpNNTu.Value);
+            rpt.SetParameterValue("den", dtpNNDen.Value);
             f.cryRViewer.ReportSource = rpt;
             f.Text = "Báo cáo nhập hàng";
             f.Show();
