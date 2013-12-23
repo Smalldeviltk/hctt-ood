@@ -21,10 +21,14 @@ namespace PresentationTier
         private void btXemThongKe_Click(object sender, EventArgs e)
         {
             DataTable dt = bus.LaydsTheoNgay(dtpNNTu.Value, dtpNNDen.Value);
-            rptBaoCaoBanHang rpt = new rptBaoCaoBanHang();
+             Report.rptBaoCaoBanHang rpt = new  Report.rptBaoCaoBanHang();
+            
             //-----------
             rpt.SetDataSource(dt);
             frmReport f = new frmReport();
+            rpt.SetParameterValue("tu", dtpNNTu.Value);
+             rpt.SetParameterValue("den", dtpNNDen.Value);
+//              
             f.cryRViewer.ReportSource = rpt;
             f.Text = "Báo cáo nhập hàng";
             f.Show();

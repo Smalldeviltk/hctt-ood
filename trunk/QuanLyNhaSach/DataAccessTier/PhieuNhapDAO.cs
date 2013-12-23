@@ -24,7 +24,7 @@ namespace DataAccessTier
         {
             dttable = new DataTable();
             cnn = helper.GetConnect();
-            sqlString = "SELECT * FROM PHIEUNHAP WHERE Ngay BETWEEN '" + tu.ToString("s").Substring(0, 10) + "' AND '" + den.ToString("s").Substring(0, 10) + "'";
+            sqlString = "SELECT * FROM PHIEUNHAP,SACH WHERE Ngay BETWEEN '" + tu.ToString("s").Substring(0, 10) + "' AND '" + den.ToString("s").Substring(0, 10) + "'";
             da = new SqlDataAdapter(sqlString, cnn);
             da.Fill(dttable);
             cnn.Close();

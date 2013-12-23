@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Report\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="frmBaoCaoBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,18 +140,34 @@
     <Compile Include="frmTacGia.Designer.CS">
       <DependentUpon>frmTacGia.CS</DependentUpon>
     </Compile>
-    <Compile Include="rptBaoCaoBanHang.cs">
+    <Compile Include="Report\rptBaoCaoBanHang.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptBaoCaoBanHang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="rptBaoCaoNhapHang.cs">
+    <Compile Include="Report\rptBaoCaoNhapHang.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptBaoCaoNhapHang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report\rptTheoTheLoai_Nhap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTheoTheLoai_Nhap.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptTheoTheLoai_Xuat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTheoTheLoai_Xuat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Report\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBaoCaoBanHang.resx">
       <DependentUpon>frmBaoCaoBanHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,13 +210,21 @@
     <EmbeddedResource Include="frmTacGia.resx">
       <DependentUpon>frmTacGia.CS</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="rptBaoCaoBanHang.rpt">
+    <EmbeddedResource Include="Report\rptBaoCaoBanHang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptBaoCaoBanHang.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="rptBaoCaoNhapHang.rpt">
+    <EmbeddedResource Include="Report\rptBaoCaoNhapHang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptBaoCaoNhapHang.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptTheoTheLoai_Nhap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTheoTheLoai_Nhap.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rptTheoTheLoai_Xuat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTheoTheLoai_Xuat.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
