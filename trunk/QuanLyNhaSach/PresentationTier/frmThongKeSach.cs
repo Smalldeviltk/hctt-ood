@@ -33,7 +33,7 @@ namespace PresentationTier
             rpt.SetParameterValue("den", dtpNNDen.Value);
             rpt.SetParameterValue("tu", dtpNNTu.Value);
             f.cryRViewer.ReportSource = rpt;
-            f.Text = "Báo cáo nhập hàng";
+            f.Text = "Báo cáo theo thể loại";
             f.Show();
         }
 
@@ -45,6 +45,86 @@ namespace PresentationTier
         private void dtpNNDen_ValueChanged(object sender, EventArgs e)
         {
             dtpNNDen.Value = dtpNNDen.Value > dtpNNTu.Value ? dtpNNDen.Value : dtpNNTu.Value;
+        }
+
+        private void btTTDe_Click(object sender, EventArgs e)
+        {
+            ReportClass rpt;
+            if (rdNhap.Checked)
+                rpt = new Report.rptTheoTuaDe_Nhap();
+            else rpt = new Report.rptTheoTuaDe_Xuat();
+
+            //------------
+            frmReport f = new frmReport();
+            rpt.SetParameterValue("den", dtpNNDen.Value);
+            rpt.SetParameterValue("tu", dtpNNTu.Value);
+            f.cryRViewer.ReportSource = rpt;
+            f.Text = "Báo cáo theo thể loại";
+            f.Show();
+        }
+
+        private void btTNVien_Click(object sender, EventArgs e)
+        {
+            ReportClass rpt;
+            if (rdNhap.Checked)
+                rpt = new Report.rptTheoNhanVien_Nhap();
+            else rpt = new Report.rptTheoNhanVien_Xuat();
+
+            //------------
+            frmReport f = new frmReport();
+            rpt.SetParameterValue("den", dtpNNDen.Value);
+            rpt.SetParameterValue("tu", dtpNNTu.Value);
+            f.cryRViewer.ReportSource = rpt;
+            f.Text = "Báo cáo theo thể loại";
+            f.Show();
+        }
+
+        private void btNCC_Click(object sender, EventArgs e)
+        {
+            ReportClass rpt;
+            if (rdNhap.Checked)
+                rpt = new Report.rptTheoNCC_Nhap();
+            else rpt = new Report.rptTheoNCC_Xuat();
+
+            //------------
+            frmReport f = new frmReport();
+            rpt.SetParameterValue("den", dtpNNDen.Value);
+            rpt.SetParameterValue("tu", dtpNNTu.Value);
+            f.cryRViewer.ReportSource = rpt;
+            f.Text = "Báo cáo theo thể loại";
+            f.Show();
+        }
+
+        private void btNXB_Click(object sender, EventArgs e)
+        {
+            ReportClass rpt;
+            if (rdNhap.Checked)
+                rpt = new Report.rptTheoNXB_Nhap();
+            else rpt = new Report.rptTheoNXB_Xuat();
+
+            //------------
+            frmReport f = new frmReport();
+            rpt.SetParameterValue("den", dtpNNDen.Value);
+            rpt.SetParameterValue("tu", dtpNNTu.Value);
+            f.cryRViewer.ReportSource = rpt;
+            f.Text = "Báo cáo theo thể loại";
+            f.Show();
+        }
+
+        private void btTTGia_Click(object sender, EventArgs e)
+        {
+            ReportClass rpt;
+            if (rdNhap.Checked)
+                rpt = new Report.rptTheoTacGia_Nhap();
+            else rpt = new Report.rptTheoTacGia_Xuat();
+
+            //------------
+            frmReport f = new frmReport();
+            rpt.SetParameterValue("den", dtpNNDen.Value);
+            rpt.SetParameterValue("tu", dtpNNTu.Value);
+            f.cryRViewer.ReportSource = rpt;
+            f.Text = "Báo cáo theo thể loại";
+            f.Show();
         }
     }
 }
