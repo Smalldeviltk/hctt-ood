@@ -86,6 +86,18 @@ namespace PresentationTier
             f.ShowDialog();
         }
 
+        private void btnBanHang_Click(object sender, EventArgs e)
+        {
+            frmBanHang f = new frmBanHang();
+            f.ShowDialog();
+        }
+
+        private void btnNhapHang_Click(object sender, EventArgs e)
+        {
+            frmPhieuNhap f = new frmPhieuNhap();
+            f.ShowDialog();
+        }
+
 
      
 
