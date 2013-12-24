@@ -218,8 +218,12 @@
       <DependentUpon>rptTheoTheLoai_Xuat.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\rptTheoTuaDe_Nhap.cs" />
-    <Compile Include="Report\rptTheoTuaDe_Xuat.cs" />
+    <Compile Include="Report\rptTheoTuaDe_Nhap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rptTheoTuaDe_Xuat.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Report\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
