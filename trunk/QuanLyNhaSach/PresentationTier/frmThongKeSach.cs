@@ -59,7 +59,7 @@ namespace PresentationTier
             rpt.SetParameterValue("den", dtpNNDen.Value);
             rpt.SetParameterValue("tu", dtpNNTu.Value);
             f.cryRViewer.ReportSource = rpt;
-            f.Text = "Báo cáo theo thể loại";
+            f.Text = "Báo cáo theo tựa đề";
             f.Show();
         }
 
@@ -75,7 +75,7 @@ namespace PresentationTier
             rpt.SetParameterValue("den", dtpNNDen.Value);
             rpt.SetParameterValue("tu", dtpNNTu.Value);
             f.cryRViewer.ReportSource = rpt;
-            f.Text = "Báo cáo theo thể loại";
+            f.Text = "Báo cáo theo nhân viên";
             f.Show();
         }
 
@@ -91,7 +91,7 @@ namespace PresentationTier
             rpt.SetParameterValue("den", dtpNNDen.Value);
             rpt.SetParameterValue("tu", dtpNNTu.Value);
             f.cryRViewer.ReportSource = rpt;
-            f.Text = "Báo cáo theo thể loại";
+            f.Text = "Báo cáo theo nhà cung cấp";
             f.Show();
         }
 
@@ -107,7 +107,7 @@ namespace PresentationTier
             rpt.SetParameterValue("den", dtpNNDen.Value);
             rpt.SetParameterValue("tu", dtpNNTu.Value);
             f.cryRViewer.ReportSource = rpt;
-            f.Text = "Báo cáo theo thể loại";
+            f.Text = "Báo cáo theo nhà xuất bản";
             f.Show();
         }
 
@@ -123,7 +123,7 @@ namespace PresentationTier
             rpt.SetParameterValue("den", dtpNNDen.Value);
             rpt.SetParameterValue("tu", dtpNNTu.Value);
             f.cryRViewer.ReportSource = rpt;
-            f.Text = "Báo cáo theo thể loại";
+            f.Text = "Báo cáo theo tác giả";
             f.Show();
         }
     }
