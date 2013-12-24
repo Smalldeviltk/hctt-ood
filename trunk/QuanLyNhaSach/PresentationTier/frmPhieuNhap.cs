@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using DTO;
 using BusinessLogicTier;
 using System.Collections;
+using QuanLiNhaSachGUI;
 
 namespace PresentationTier
 {
@@ -98,7 +99,7 @@ namespace PresentationTier
             else
             {
                 PhieuNhap hd = new PhieuNhap();
-                //hd.MaNhanVien = Auth.logged.id;
+                hd.MaNhanVien = "1";
                 hd.TongTien = tongtien.ToString();
                 hd.Ngay = DateTime.Now.ToString();
 
@@ -114,41 +115,40 @@ namespace PresentationTier
                     NhapHangBUS.updateSoLuongSach(cthd.MaSach, cthd.SoLuong);
                 }
                 MessageBox.Show("Lưu thành công");
-                //XuatPhieuNhap();
+                XuatPhieuNhap();
                 btnNhapMoi_Click(sender, e);
             }
         }
 
-        //public void XuatPhieuNhap()
-        //{
-        //    frmReportViewer frm = new frmReportViewer();
-        //    DataTable dt = new DataTable();
-        //    foreach (DataGridViewColumn col in dataGridView2.Columns)
-        //    {
-        //        dt.Columns.Add(col.DataPropertyName, col.ValueType);
-        //    }
-        //    Int32 t = new Int32();
-        //    dt.Columns[5].DataType = t.GetType();
-        //    dt.Columns[3].DataType = t.GetType();
-        //    foreach (DataGridViewRow gridRow in dataGridView2.Rows)
-        //    {
-        //        if (gridRow.IsNewRow)
-        //            continue;
-        //        DataRow dtRow = dt.NewRow();
-        //        for (int i1 = 0; i1 < dataGridView2.Columns.Count; i1++)
-        //            dtRow[i1] = (gridRow.Cells[i1].Value == null ? DBNull.Value : gridRow.Cells[i1].Value);
-        //        dt.Rows.Add(dtRow);
-        //    }
-        //    frm.viewPhieuNhap(dt);
-        //}
+        public void XuatPhieuNhap()
+        {
+            frmReportViewer frm = new frmReportViewer();
+            DataTable dt = new DataTable();
+            foreach (DataGridViewColumn col in dataGridView2.Columns)
+            {
+                dt.Columns.Add(col.DataPropertyName, col.ValueType);
+            }
+            Int32 t = new Int32();
+            dt.Columns[5].DataType = t.GetType();
+            dt.Columns[3].DataType = t.GetType();
+            foreach (DataGridViewRow gridRow in dataGridView2.Rows)
+            {
+                if (gridRow.IsNewRow)
+                    continue;
+                DataRow dtRow = dt.NewRow();
+                for (int i1 = 0; i1 < dataGridView2.Columns.Count; i1++)
+                    dtRow[i1] = (gridRow.Cells[i1].Value == null ? DBNull.Value : gridRow.Cells[i1].Value);
+                dt.Rows.Add(dtRow);
+            }
+            frm.viewPhieuNhap(dt);
+        }
 
         private void btnNhapMoi_Click(object sender, EventArgs e)
         {
-            txtSoLuong.Text = "";
+            txtSoLuong.Text = "1";
             txtTimSach.Text = "";
-            txtTongTien.Text = "";
             dataGridView2.Refresh();
-            //dataGridView1.DataSource = null;
+            dataGridView1.DataSource = null;
             dataGridView1.Refresh();
         }
 
@@ -183,21 +183,6 @@ namespace PresentationTier
             dataGridView2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-            dataGridView1.DataSource = tb;
-            dataGridView1.Columns[0].ReadOnly = true;
-            dataGridView1.Columns[1].ReadOnly = true;
-            dataGridView1.Columns[2].ReadOnly = true;
-            dataGridView1.Columns[3].ReadOnly = true;
-            dataGridView1.Columns[4].ReadOnly = true;
-            dataGridView1.Columns[5].ReadOnly = true;
-
-            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void txtTimSach_TextChanged(object sender, EventArgs e)
@@ -226,6 +211,11 @@ namespace PresentationTier
         {
             dataGridView1.DataSource = NhapHangBUS.TimSach(txtTimSach.Text);
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

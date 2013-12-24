@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTimSach = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnNhapMoi = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -164,6 +164,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm Sách";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(471, 24);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 33);
+            this.btnSearch.TabIndex = 19;
+            this.btnSearch.Text = "Tìm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btnThem);
@@ -228,6 +239,7 @@
             // txtTongTien
             // 
             this.txtTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtTongTien.Enabled = false;
             this.txtTongTien.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTongTien.Location = new System.Drawing.Point(156, 472);
             this.txtTongTien.Name = "txtTongTien";
@@ -258,16 +270,6 @@
             this.btnNhapMoi.Text = "Nhập Mới";
             this.btnNhapMoi.UseVisualStyleBackColor = true;
             this.btnNhapMoi.Click += new System.EventHandler(this.btnNhapMoi_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(471, 24);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 33);
-            this.btnSearch.TabIndex = 19;
-            this.btnSearch.Text = "Tìm";
-            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // frmPhieuNhap
             // 
