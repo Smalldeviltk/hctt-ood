@@ -39,6 +39,7 @@
             this.btNXB = new System.Windows.Forms.Button();
             this.rdNhap = new System.Windows.Forms.RadioButton();
             this.rdXuat = new System.Windows.Forms.RadioButton();
+            this.btTTGia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -95,6 +96,7 @@
             this.btTTDe.TabIndex = 15;
             this.btTTDe.Text = "Theo tựa đề";
             this.btTTDe.UseVisualStyleBackColor = true;
+            this.btTTDe.Click += new System.EventHandler(this.btTTDe_Click);
             // 
             // btTNVien
             // 
@@ -104,6 +106,7 @@
             this.btTNVien.TabIndex = 16;
             this.btTNVien.Text = "Theo Nhân Viên";
             this.btTNVien.UseVisualStyleBackColor = true;
+            this.btTNVien.Click += new System.EventHandler(this.btTNVien_Click);
             // 
             // btNCC
             // 
@@ -113,15 +116,17 @@
             this.btNCC.TabIndex = 17;
             this.btNCC.Text = "Theo Nhà Cung Cấp";
             this.btNCC.UseVisualStyleBackColor = true;
+            this.btNCC.Click += new System.EventHandler(this.btNCC_Click);
             // 
             // btNXB
             // 
-            this.btNXB.Location = new System.Drawing.Point(340, 300);
+            this.btNXB.Location = new System.Drawing.Point(312, 300);
             this.btNXB.Name = "btNXB";
             this.btNXB.Size = new System.Drawing.Size(122, 23);
             this.btNXB.TabIndex = 18;
             this.btNXB.Text = "Theo Nhà Xuất Bản";
             this.btNXB.UseVisualStyleBackColor = true;
+            this.btNXB.Click += new System.EventHandler(this.btNXB_Click);
             // 
             // rdNhap
             // 
@@ -146,11 +151,22 @@
             this.rdXuat.Text = "Xuất";
             this.rdXuat.UseVisualStyleBackColor = true;
             // 
+            // btTTGia
+            // 
+            this.btTTGia.Location = new System.Drawing.Point(448, 291);
+            this.btTTGia.Name = "btTTGia";
+            this.btTTGia.Size = new System.Drawing.Size(122, 23);
+            this.btTTGia.TabIndex = 21;
+            this.btTTGia.Text = "Theo Tác giả";
+            this.btTTGia.UseVisualStyleBackColor = true;
+            this.btTTGia.Click += new System.EventHandler(this.btTTGia_Click);
+            // 
             // frmThongKeSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 377);
+            this.Controls.Add(this.btTTGia);
             this.Controls.Add(this.rdXuat);
             this.Controls.Add(this.rdNhap);
             this.Controls.Add(this.btNXB);
@@ -182,5 +198,6 @@
         private System.Windows.Forms.Button btNXB;
         private System.Windows.Forms.RadioButton rdNhap;
         private System.Windows.Forms.RadioButton rdXuat;
+        private System.Windows.Forms.Button btTTGia;
     }
 }
