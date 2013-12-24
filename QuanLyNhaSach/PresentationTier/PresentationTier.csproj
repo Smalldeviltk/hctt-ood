@@ -66,6 +66,138 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalReportHoaDon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportHoaDon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportPhieuNhap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportPhieuNhap.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\BCBan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BCBan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\BCNhap.cs">
+      <DependentUpon>BCNhap.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\NCCBan.cs">
+      <DependentUpon>NCCBan.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\NCCE.cs">
+      <DependentUpon>NCCE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\NCCNhap.cs">
+      <DependentUpon>NCCNhap.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\NVBan.cs">
+      <DependentUpon>NVBan.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\NVNhap.cs">
+      <DependentUpon>NVNhap.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\NXBBan.cs">
+      <DependentUpon>NXBBan.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\NXBE.cs">
+      <DependentUpon>NXBE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\NXBNhap.cs">
+      <DependentUpon>NXBNhap.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\TGBan.cs">
+      <DependentUpon>TGBan.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\TGE.cs">
+      <DependentUpon>TGE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\TLE.cs">
+      <DependentUpon>TLE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\TuaMua.cs">
+      <DependentUpon>TuaMua.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\TLNhap.cs">
+      <DependentUpon>TLNhap.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\TuaE.cs">
+      <DependentUpon>TuaE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\TLBan.cs">
+      <DependentUpon>TLBan.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\TuaBan.cs">
+      <DependentUpon>TuaBan.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\TGNhap.cs">
+      <DependentUpon>TGNhap.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CR\TonKho.cs">
+      <DependentUpon>TonKho.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="frmBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +209,12 @@
     </Compile>
     <Compile Include="frmPhieuNhap.Designer.cs">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportViewer.Designer.cs">
+      <DependentUpon>frmReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSach.cs">
       <SubType>Form</SubType>
@@ -236,6 +374,94 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>rptTheoTuaDe_Xuat.rpt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CrystalReportHoaDon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportHoaDon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportPhieuNhap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportPhieuNhap.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\BCBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BCBan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\BCNhap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BCNhap.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\NCCBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NCCBan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\NCCE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NCCE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\NCCNhap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NCCNhap.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\NVBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NVBan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\NVNhap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NVNhap.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\NXBBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NXBBan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\NXBE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NXBE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\NXBNhap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>NXBNhap.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\TGBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TGBan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\TGE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TGE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\TLE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TLE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\TuaMua.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TuaMua.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\TLNhap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TLNhap.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\TuaE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TuaE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\TLBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TLBan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\TuaBan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TuaBan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\TGNhap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TGNhap.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR\TonKho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TonKho.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBaoCaoBanHang.resx">
       <DependentUpon>frmBaoCaoBanHang.cs</DependentUpon>
     </EmbeddedResource>

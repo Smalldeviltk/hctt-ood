@@ -13,14 +13,11 @@ namespace BusinessLogicTier
 {
     public class NhapHangBUS
     {
-        static NhapHangDAO nhD = new NhapHangDAO();
-        PhieuNhap pn = new PhieuNhap();
-
         public static DataTable TimSach(string str)
         {
             try
             {
-                return nhD.TimSach(str);
+                return NhapHangDAO.TimSach(str);
             }
             catch (Exception ex)
             {
@@ -32,7 +29,7 @@ namespace BusinessLogicTier
         {
             try
             {
-                return nhD.insertPhieuNhap(m);
+                return NhapHangDAO.insertPhieuNhap(m);
             }
             catch (Exception ex)
             {
@@ -44,7 +41,7 @@ namespace BusinessLogicTier
         {
             try
             {
-                nhD.insertChiTietPhieuNhap(m);
+                NhapHangDAO.insertChiTietPhieuNhap(m);
             }
             catch (Exception ex)
             {
@@ -55,7 +52,7 @@ namespace BusinessLogicTier
         {
             try
             {
-                nhD.updateSoLuongSach(MaSach, SoLuong);
+                NhapHangDAO.updateSoLuongSach(MaSach, SoLuong);
             }
             catch (Exception ex)
             {

@@ -43,9 +43,8 @@ namespace PresentationTier
 
         private void btnNhapMoi_Click(object sender, EventArgs e)
         {
-            txtSoLuong.Text = "";
+            txtSoLuong.Text = "1";
             txtTimSach.Text = "";
-            txtTongTien.Text = "";
             dataGridView2.Refresh();
             dataGridView1.DataSource = null;
             dataGridView1.Refresh();
@@ -53,7 +52,7 @@ namespace PresentationTier
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void frmBanHang_Load(object sender, EventArgs e)

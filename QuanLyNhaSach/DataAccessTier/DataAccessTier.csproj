@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="BanHangDAO.cs" />
     <Compile Include="HoaDonDAO.cs" />
-    <Compile Include="NhanHangDAO.cs" />
+    <Compile Include="NhapHangDAO.cs" />
     <Compile Include="PhieuNhapDAO.cs" />
     <Compile Include="DAOHelper.cs" />
     <Compile Include="NhaCungCapDAO.cs" />
@@ -50,6 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SachDAO.cs" />
     <Compile Include="SachTacGiaDAO.cs" />
+    <Compile Include="sqlDB.cs" />
     <Compile Include="TacGiaDAO.cs" />
     <Compile Include="TheLoaiDAO.cs" />
   </ItemGroup>
