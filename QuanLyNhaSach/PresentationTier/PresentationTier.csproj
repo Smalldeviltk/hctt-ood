@@ -84,12 +84,6 @@
     <Compile Include="frmSach.Designer.cs">
       <DependentUpon>frmSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\CrystalReport1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="frmBaoCaoBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,20 +226,16 @@
     </Compile>
     <Compile Include="Report\rptTheoTuaDe_Nhap.cs">
       <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTheoTuaDe_Nhap.rpt</DependentUpon>
     </Compile>
     <Compile Include="Report\rptTheoTuaDe_Xuat.cs">
       <SubType>Component</SubType>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTheoTuaDe_Xuat.rpt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmBanHang.resx">
-      <DependentUpon>frmBanHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPhieuNhap.resx">
-      <DependentUpon>frmPhieuNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Report\CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmBaoCaoBanHang.resx">
       <DependentUpon>frmBaoCaoBanHang.cs</DependentUpon>
     </EmbeddedResource>
