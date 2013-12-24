@@ -7,6 +7,7 @@ using DataAccessTier;
 using DTO;
 using System.Data.SqlClient;
 using System.Data;
+using System.Collections;
 namespace BusinessLogicTier
 {
     public class TacGiaBUS
@@ -32,6 +33,22 @@ namespace BusinessLogicTier
         public string LayMaMax()
         {
             return tgD.LayMaMax();
+        }
+        public ArrayList LaydsTen()
+        {
+            return tgD.LaydsTen();
+        }
+        public DataTable LayTacGiaTheoSach()
+        {
+            return tgD.LayTacGiaTheoSach();
+        }
+        public ArrayList LayTacGiaTheoSach(string masach)
+        {
+            return tgD.LayTacGiaTheoSach(masach);
+        }
+        public string LayMaTheoTen(string ten)
+        {
+            return tgD.LayMaTheoTen(ten);
         }
     }
 }

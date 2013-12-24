@@ -7,7 +7,7 @@ using DataAccessTier;
 using DTO;
 using System.Data.SqlClient;
 using System.Data;
-
+using System.Collections;
 namespace BusinessLogicTier
 {
     public class TheLoaiBUS
@@ -33,6 +33,14 @@ namespace BusinessLogicTier
         public string LayMaMax()
         {
             return tlD.LayMaMax();
+        }
+        public ArrayList LaydsTen()
+        {
+            return tlD.LaydsTen();
+        }
+        public string LayMaTheoTen(string ten)
+        {
+            return tlD.LayMaTheoTen(ten);
         }
 
     }

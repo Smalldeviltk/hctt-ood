@@ -41,9 +41,9 @@ namespace PresentationTier
             btXoa.Enabled = false;
             btCapNhat.Enabled = false;
         }
+        
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-
             loadData();
         }
 
@@ -116,6 +116,7 @@ namespace PresentationTier
             MessageBox.Show("Thêm nhân viên thành công");
 
         }
+        
         private void btXoa_Click(object sender, EventArgs e)
         {
             string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
@@ -177,9 +178,9 @@ namespace PresentationTier
             data.Ten = tbTen.Text;
             data.Username = tbTaiKhoan.Text;
             data.NgaySinh = ntn;
-            bus.Update(data);
-            loadData();
+            bus.Update(data);            
             MessageBox.Show("Cập nhật thành công");
+            loadData();
         }
 
         private void gridView_SelectionChanged(object sender, EventArgs e)

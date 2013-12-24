@@ -66,6 +66,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmSach.cs" />
+    <Compile Include="frmSach.Designer.cs">
+      <DependentUpon>frmSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\CrystalReport1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -164,6 +168,9 @@
       <DependentUpon>rptTheoTheLoai_Xuat.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="frmSach.resx">
+      <DependentUpon>frmSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>
