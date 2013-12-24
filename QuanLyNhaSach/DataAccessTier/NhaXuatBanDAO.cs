@@ -20,6 +20,7 @@ namespace DataAccessTier
         private string sqlString;
         private DataTable dttable;
         DAOHelper helper = new DAOHelper();
+
         public DataTable LaydsNhaXuatBan()
         {
             dttable = new DataTable();
@@ -30,6 +31,7 @@ namespace DataAccessTier
             cnn.Close();
             return dttable;
         }
+
         public void Insert(NhaXuatBan info)
         {
             cnn = helper.GetConnect();
@@ -95,6 +97,7 @@ namespace DataAccessTier
             }
             cnn.Close();
         }
+        
         public string LayMaMax()
         {
             string mamax = "";
@@ -119,5 +122,51 @@ namespace DataAccessTier
             return mamax;
         }
 
+        public ArrayList LaydsTen()
+        {
+            ArrayList ds = new ArrayList();
+            cnn = helper.GetConnect();
+            sqlString = "  SELECT TEN FROM  NHAXUATBAN ";
+            cmd = new SqlCommand(sqlString, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    ds.Add(dr["Ten"].ToString());
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong add vao mang Array đc.");
+                }
+            }
+            return ds;
+        }
+
+        public string LayMaTheoTen(string ten)
+        {
+            string mamax = "";
+            cnn = helper.GetConnect();
+            sqlString = "SELECT id from NhaXuatBan where Ten=N'" + ten + "'";
+            cmd = new SqlCommand(sqlString, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    mamax = (dr["id"].ToString());
+
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong lay duoc ma max");
+                }
+
+            }
+            cnn.Close();
+            return mamax;
+        }
     }
 }

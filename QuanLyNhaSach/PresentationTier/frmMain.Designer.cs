@@ -84,6 +84,7 @@
             this.btSach.TabIndex = 4;
             this.btSach.Text = "Sách";
             this.btSach.UseVisualStyleBackColor = true;
+            this.btSach.Click += new System.EventHandler(this.btSach_Click);
             // 
             // btTheLoai
             // 

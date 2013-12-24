@@ -62,6 +62,12 @@ namespace PresentationTier
             f.ShowDialog();
         }
 
+        private void btSach_Click(object sender, EventArgs e)
+        {
+            frmSach f = new frmSach();
+            f.ShowDialog();
+        }
+
 
      
 

@@ -30,6 +30,16 @@ namespace DataAccessTier
             cnn.Close();
             return dttable;
         }
+        public DataTable LayTacGiaTheoSach()
+        {
+            dttable = new DataTable();
+            cnn = helper.GetConnect();
+            sqlString = "select tg.Ten from TACGIA tg, SACHTACGIA stg, SACH s  where tg.id=stg.MaTacGia and s.id = stg.MaSach";
+            da = new SqlDataAdapter(sqlString, cnn);
+            da.Fill(dttable);
+            cnn.Close();
+            return dttable;
+        }
         public void Insert(TacGia info)
         {
             cnn = helper.GetConnect();
@@ -118,6 +128,73 @@ namespace DataAccessTier
             cnn.Close();
             return mamax;
         }
+        public ArrayList LaydsTen()
+        {
+            ArrayList ds = new ArrayList();
+            cnn = helper.GetConnect();
+            sqlString = "  SELECT TEN FROM  TACGIA ";
+            cmd = new SqlCommand(sqlString, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    ds.Add(dr["Ten"].ToString());
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong add vao mang Array đc.");
+                }
+            }
+            return ds;
+        }
 
+        public ArrayList LayTacGiaTheoSach(string masach)
+        {
+            ArrayList ds = new ArrayList();
+            cnn = helper.GetConnect();
+            sqlString = "select tg.Ten from TACGIA tg, SACHTACGIA stg where tg.id=stg.MaTacGia and stg.MaSach='" + masach + "'";
+            cmd = new SqlCommand(sqlString, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    ds.Add(dr["Ten"].ToString());
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong add vao mang Array đc.");
+                }
+            }
+            return ds;
+        }
+
+        public string LayMaTheoTen(string ten)
+        {
+            string ma = "";
+            cnn = helper.GetConnect();
+            sqlString = "SELECT id from TacGia where Ten=N'" + ten + "'";
+            cmd = new SqlCommand(sqlString, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    ma = (dr["id"].ToString());
+
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong lay duoc ma max");
+                }
+
+            }
+            cnn.Close();
+            return ma;
+        }
     }
 }

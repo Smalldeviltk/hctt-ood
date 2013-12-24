@@ -20,22 +20,47 @@ namespace DataAccessTier
         private string sqlString;
         private DataTable dttable;
         DAOHelper helper = new DAOHelper();
+
         public DataTable LaydsSach()
         {
             dttable = new DataTable();
             cnn = helper.GetConnect();
-            sqlString = " SELECT id as [Mã sách], Ten as [Tên sách], GiaMua as [Giá mua], GiaBan as [Giá bán], MaNhaCungCap as [Mã nhà cung cấp], SoLuong as [Số lượng] FROM SACH";
+            sqlString = " SELECT s.id as [Mã sách], s.Ten as [Tên Sách], tl.Ten as [Thể Loại], s.GiaMua as [Giá mua],"
+            + "s.GiaBan as [Giá Bán], s.SoLuong as [Số lượng], ncc.Ten as [Nhà cung cấp], nxb.Ten as [Nhà xuất bản] FROM SACH s"
+            + ", TheLoai tl, NhaCungCap ncc, NhaXuatBan nxb where s.MaTheLoai=tl.id and s.MaNhaCungCap=ncc.id and s.MaNhaXuatBan=nxb.id";
             da = new SqlDataAdapter(sqlString, cnn);
             da.Fill(dttable);
             cnn.Close();
             return dttable;
         }
 
+        public ArrayList LaydsMa()
+        {
+            ArrayList ds = new ArrayList();
+            cnn = helper.GetConnect();
+            sqlString = "  SELECT id FROM  Sach ";
+            cmd = new SqlCommand(sqlString, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    ds.Add(dr["id"].ToString());
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong add vao mang Array đc.");
+                }
+            }
+            return ds;
+        }
+
         public void Insert(Sach info)
         {
             cnn = helper.GetConnect();
-            sqlString = "Insert into Sach(id, Ten, GiaMua, GiaBan, MaNhaCungCap, SoLuong ) values ('" + info.Id + "',N'" + info.TenSach + "','" + info.GiaMua + "','" + info.GiaBan + "','" + info.NhaCungCap + "','" + info.SoLuong + "')";
-
+            sqlString = "Insert into Sach(id, Ten, GiaMua, GiaBan, MaNhaCungCap, SoLuong, MaTheLoai, MaNhaXuatBan ) "
+            + "values ('" + info.Id + "',N'" + info.TenSach + "','" + info.GiaMua + "','" + info.GiaBan + "','" + info.NhaCungCap + "','" + info.SoLuong + "','" + info.TheLoai + "','" + info.NhaXuatBan + "')";
             try
             {
 
@@ -49,7 +74,6 @@ namespace DataAccessTier
                 cnn.Close();
                 throw new Exception("Lỗi Kết Nối Cơ sở dữ liệu.");
             }
-
             cnn.Close();
 
         }
@@ -76,57 +100,58 @@ namespace DataAccessTier
 
         }
 
-        //public void Update(Sach info)
-        //{
-        //    sqlString = "UPDATE SACH SET Ten='" + info.Ten +
-        //        "',GiaMua='" + info.Giamua +
-        //        "',GiaBan='" + info.Giaban +
-        //        "',MaNhaCungCap='" + info.Manhacungcap +
-        //        "',SoLuong='" + info.Soluong +
-        //        "' WHERE id='" + info.Id + "'";
-        //    cnn = helper.GetConnect();
-        //    try
-        //    {
+        public void Update(Sach info)
+        {
+            sqlString = "UPDATE SACH SET Ten=N'" + info.TenSach +
+                "',GiaMua='" + info.GiaMua +
+                "',GiaBan='" + info.GiaBan +
+                "',MaNhaCungCap='" + info.NhaCungCap +
+                "',SoLuong='" + info.SoLuong +
+                "',MaTheLoai='" + info.TheLoai +
+                "',MaNhaXuatBan='" + info.NhaXuatBan +
+                "' WHERE id='" + info.Id + "'";
+            cnn = helper.GetConnect();
+            try
+            {
 
-        //        //Thực thi câu lệnh SQL
-        //        cmd = new SqlCommand(sqlString, cnn);
-        //        cmd.ExecuteNonQuery();
-        //    }
-        //    catch (System.Exception e)
-        //    {
-        //        cnn.Close();
-        //        throw new Exception("Lỗi Kết Nối Cơ sở dữ liệu.");
-        //    }
-        //    cnn.Close();
-        //}
+                //Thực thi câu lệnh SQL
+                cmd = new SqlCommand(sqlString, cnn);
+                cmd.ExecuteNonQuery();
+            }
+            catch (System.Exception e)
+            {
+                cnn.Close();
+                throw new Exception("Lỗi Kết Nối Cơ sở dữ liệu.");
+            }
+            cnn.Close();
+        }
+
+        public string LayMaMax()
+        {
+            string mamax = "";
+            cnn = helper.GetConnect();
+            sqlString = "SELECT TOP 1 id FROM Sach ORDER BY id DESC";
+            cmd = new SqlCommand(sqlString, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    mamax = (dr["id"].ToString());
+
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong lay duoc ma max");
+                }
+
+            }
+            cnn.Close();
+            return mamax;
+        }
 
 
-        //public string LayMaMax()
-        //{
-        //    string mamax = "";
-
-        //    cnn = getConnect();
-
-        //    sqlString = "SELECT TOP 1 id FROM Sach ORDER BY id DESC";
-        //    cmd = new SqlCommand(sqlString, cnn);
-        //    dr = cmd.ExecuteReader();
-        //    while (dr.Read())
-        //    {
-        //        try
-        //        {
-        //            mamax = (dr["id"].ToString());
-
-        //        }
-        //        catch (System.Exception e)
-        //        {
-        //            cnn.Close();
-        //            throw new Exception("Khong lay duoc ma max");
-        //        }
-
-        //    }
-        //    cnn.Close();
-        //    return mamax;
-        //}
     }
 
 }

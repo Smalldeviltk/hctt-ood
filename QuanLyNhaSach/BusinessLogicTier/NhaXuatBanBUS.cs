@@ -7,6 +7,7 @@ using DataAccessTier;
 using DTO;
 using System.Data.SqlClient;
 using System.Data;
+using System.Collections;
 namespace BusinessLogicTier
 {
     public class NhaXuatBanBUS
@@ -32,6 +33,14 @@ namespace BusinessLogicTier
         public string LayMaMax()
         {
             return nxbD.LayMaMax();
+        }
+        public ArrayList LaydsTen()
+        {
+            return nxbD.LaydsTen();
+        }
+        public string LayMaTheoTen(string ten)
+        {
+            return nxbD.LayMaTheoTen(ten);
         }
     }
 }

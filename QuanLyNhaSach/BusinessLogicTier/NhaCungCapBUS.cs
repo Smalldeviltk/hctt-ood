@@ -7,6 +7,8 @@ using DataAccessTier;
 using DTO;
 using System.Data.SqlClient;
 using System.Data;
+using System.Collections;
+
 namespace BusinessLogicTier
 {
     public class NhaCungCapBUS
@@ -32,6 +34,14 @@ namespace BusinessLogicTier
         public string LayMaMax()
         {
             return nccD.LayMaMax();
+        }
+        public ArrayList LaydsTen()
+        {
+            return nccD.LaydsTen();
+        }
+        public string LayMaTheoTen(string ten)
+        {
+            return nccD.LayMaTheoTen(ten);
         }
     }
 }

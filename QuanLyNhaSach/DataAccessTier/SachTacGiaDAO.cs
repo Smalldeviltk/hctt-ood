@@ -7,10 +7,9 @@ using System.Data.SqlClient;
 using System.Data;
 using DTO;
 using System.Collections;
-
 namespace DataAccessTier
 {
-    public class TheLoaiDAO
+    public class SachTacGiaDAO
     {
         private SqlDataAdapter da;
         private SqlConnection cnn;
@@ -20,47 +19,13 @@ namespace DataAccessTier
         private string sqlString;
         private DataTable dttable;
         DAOHelper helper = new DAOHelper();
-        
-        public DataTable LaydsTheLoai()
-        {
-            dttable = new DataTable();
-            cnn = helper.GetConnect();
-            sqlString = " SELECT id as [Mã thể loại], Ten as [Tên thể loại] FROM THELOAI";
-            da = new SqlDataAdapter(sqlString, cnn);
-            da.Fill(dttable);
-            cnn.Close();
-            return dttable;
-        }
-        
-        public void Insert(TheLoai info)
+
+        public void Insert(SachTacGia info)
         {
             cnn = helper.GetConnect();
-            sqlString = "Insert into THELOAI(id, Ten) values ('" + info.Id + "',N'" + info.Ten +"')";
+            sqlString = "Insert into SachTacGia(id, MaSach, MaTacGia) values ('" + info.Id + "',N'" + info.MaSach + "','" + info.MaTacGia + "')";
             try
             {
-
-                //Thực thi câu lệnh SQL
-                cmd = new SqlCommand(sqlString, cnn);
-                cmd.ExecuteNonQuery();
-
-            }
-            catch (System.Exception e)
-            {
-                cnn.Close();
-                throw new Exception("Lỗi Kết Nối Cơ sở dữ liệu.");
-            }
-
-            cnn.Close();
-
-        }
-
-        public void Delete(string id)
-        {
-            sqlString = "DELETE FROM THELOAI WHERE id='" + id + "'";
-            cnn = helper.GetConnect();
-            try
-            {
-
                 //Thực thi câu lệnh SQL
                 cmd = new SqlCommand(sqlString, cnn);
                 cmd.ExecuteNonQuery();
@@ -74,9 +39,32 @@ namespace DataAccessTier
 
         }
 
-        public void Update(TheLoai info)
+        public void Delete(string masach)
         {
-            sqlString = "UPDATE THELOAI SET Ten=N'" + info.Ten +
+            sqlString = "DELETE FROM SACHTACGIA WHERE MaSach='" + masach + "'";
+            cnn = helper.GetConnect();
+            try
+            {
+
+                //Thực thi câu lệnh SQL
+                cmd = new SqlCommand(sqlString, cnn);
+                cmd.ExecuteNonQuery();
+
+
+            }
+            catch (System.Exception e)
+            {
+                cnn.Close();
+                throw new Exception("Lỗi Kết Nối Cơ sở dữ liệu.");
+            }
+            cnn.Close();
+
+        }
+
+        public void Update(SachTacGia info)
+        {
+            sqlString = "UPDATE SACHTACGIA SET MaTacGia='" + info.MaTacGia +
+                "',MaSach='"+info.MaSach+
                 "' WHERE id='" + info.Id + "'";
             cnn = helper.GetConnect();
             try
@@ -92,43 +80,19 @@ namespace DataAccessTier
             }
             cnn.Close();
         }
-       
-        public string LayMaMax()
-        {
-            string mamax = "";
-            cnn = helper.GetConnect();
-            sqlString = "SELECT TOP 1 id FROM THELOAI ORDER BY id DESC";
-            cmd = new SqlCommand(sqlString, cnn);
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                try
-                {
-                    mamax = (dr["id"].ToString());
 
-                }
-                catch (System.Exception e)
-                {
-                    cnn.Close();
-                    throw new Exception("Khong lay duoc ma max");
-                }
-            }
-            cnn.Close();
-            return mamax;
-        }
-        
-        public ArrayList LaydsTen()
+        public string LayMaTheoMaSach(string masach)
         {
-            ArrayList ds = new ArrayList();
+            string ma = "";
             cnn = helper.GetConnect();
-            sqlString = "  SELECT TEN FROM  THELOAI ";
+            sqlString = "  SELECT id FROM  SachTacGia where MaSach='"+masach+"'";
             cmd = new SqlCommand(sqlString, cnn);
             dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 try
                 {
-                    ds.Add(dr["Ten"].ToString());
+                    ma=(dr["id"].ToString());
                 }
                 catch (System.Exception e)
                 {
@@ -136,14 +100,14 @@ namespace DataAccessTier
                     throw new Exception("Khong add vao mang Array đc.");
                 }
             }
-            return ds;
+            return ma;
         }
 
-        public string LayMaTheoTen(string ten)
+        public string LayMaMax()
         {
             string mamax = "";
             cnn = helper.GetConnect();
-            sqlString = "SELECT id from TheLoai where Ten=N'" + ten + "'";
+            sqlString = "SELECT TOP 1 id FROM SachTacGia ORDER BY id DESC";
             cmd = new SqlCommand(sqlString, cnn);
             dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -163,7 +127,5 @@ namespace DataAccessTier
             cnn.Close();
             return mamax;
         }
-
-
     }
 }

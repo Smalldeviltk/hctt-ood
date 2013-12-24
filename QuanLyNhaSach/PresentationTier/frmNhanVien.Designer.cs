@@ -184,6 +184,7 @@
             // 
             // cbbGioiTinh
             // 
+            this.cbbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbGioiTinh.FormattingEnabled = true;
             this.cbbGioiTinh.Items.AddRange(new object[] {
             "Nam",
@@ -230,6 +231,7 @@
             // 
             // cbbLoai
             // 
+            this.cbbLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLoai.FormattingEnabled = true;
             this.cbbLoai.Items.AddRange(new object[] {
             "A",
@@ -276,6 +278,7 @@
             // 
             // cbbNgay
             // 
+            this.cbbNgay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbNgay.FormattingEnabled = true;
             this.cbbNgay.Items.AddRange(new object[] {
             "01",
@@ -326,6 +329,7 @@
             // 
             // cbbThang
             // 
+            this.cbbThang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbThang.FormattingEnabled = true;
             this.cbbThang.Items.AddRange(new object[] {
             "01",
