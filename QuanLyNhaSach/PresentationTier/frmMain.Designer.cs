@@ -39,6 +39,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.btnBanHang = new System.Windows.Forms.Button();
             this.btnNhapHang = new System.Windows.Forms.Button();
+            this.btTimSach = new System.Windows.Forms.Button();
+            this.btTimNV = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btTacGia
@@ -151,11 +153,33 @@
             this.btnNhapHang.UseVisualStyleBackColor = true;
             this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
             // 
+            // btTimSach
+            // 
+            this.btTimSach.Location = new System.Drawing.Point(336, 191);
+            this.btTimSach.Name = "btTimSach";
+            this.btTimSach.Size = new System.Drawing.Size(79, 33);
+            this.btTimSach.TabIndex = 11;
+            this.btTimSach.Text = "Tìm sách";
+            this.btTimSach.UseVisualStyleBackColor = true;
+            this.btTimSach.Click += new System.EventHandler(this.btTimSach_Click);
+            // 
+            // btTimNV
+            // 
+            this.btTimNV.Location = new System.Drawing.Point(457, 191);
+            this.btTimNV.Name = "btTimNV";
+            this.btTimNV.Size = new System.Drawing.Size(93, 33);
+            this.btTimNV.TabIndex = 12;
+            this.btTimNV.Text = "Tìm nhân viên";
+            this.btTimNV.UseVisualStyleBackColor = true;
+            this.btTimNV.Click += new System.EventHandler(this.btTimNV_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 291);
+            this.Controls.Add(this.btTimNV);
+            this.Controls.Add(this.btTimSach);
             this.Controls.Add(this.btnNhapHang);
             this.Controls.Add(this.btnBanHang);
             this.Controls.Add(this.button3);
@@ -187,6 +211,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnBanHang;
         private System.Windows.Forms.Button btnNhapHang;
+        private System.Windows.Forms.Button btTimSach;
+        private System.Windows.Forms.Button btTimNV;
 
 
     }

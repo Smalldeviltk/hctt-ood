@@ -123,6 +123,35 @@ namespace DataAccessTier
             return mamax;
         }
 
-
+        public DataTable TimTheoTen(string tennv)
+        {
+            dttable = new DataTable();
+            cnn = helper.GetConnect();
+            sqlString = " SELECT id as [Mã nhân viên], Ten as [Tên nhân viên], NgaySinh as [Ngày sinh], CMND as [CMND], GioiTinh as [Giới tính], SoDienThoai as [Số điện thoại], DiaChi as [Địa chỉ], Email as [Email], UserName as [Tài khoản], PassWord as [Mật khẩu], Loai as [Loại] FROM NHANVIEN where Ten LIKE N'" + tennv + "%'";
+            da = new SqlDataAdapter(sqlString, cnn);
+            da.Fill(dttable);
+            cnn.Close();
+            return dttable;
+        }
+        public DataTable TimTheoCMND(string cmnd)
+        {
+            dttable = new DataTable();
+            cnn = helper.GetConnect();
+            sqlString = " SELECT id as [Mã nhân viên], Ten as [Tên nhân viên], NgaySinh as [Ngày sinh], CMND as [CMND], GioiTinh as [Giới tính], SoDienThoai as [Số điện thoại], DiaChi as [Địa chỉ], Email as [Email], UserName as [Tài khoản], PassWord as [Mật khẩu], Loai as [Loại] FROM NHANVIEN where CMND LIKE '" + cmnd + "%'";
+            da = new SqlDataAdapter(sqlString, cnn);
+            da.Fill(dttable);
+            cnn.Close();
+            return dttable;
+        }
+        public DataTable TimTheoNgaySinh(string ngaysinh)
+        {
+            dttable = new DataTable();
+            cnn = helper.GetConnect();
+            sqlString = " SELECT id as [Mã nhân viên], Ten as [Tên nhân viên], NgaySinh as [Ngày sinh], CMND as [CMND], GioiTinh as [Giới tính], SoDienThoai as [Số điện thoại], DiaChi as [Địa chỉ], Email as [Email], UserName as [Tài khoản], PassWord as [Mật khẩu], Loai as [Loại] FROM NHANVIEN where NgaySinh LIKE '" + ngaysinh + "%'";
+            da = new SqlDataAdapter(sqlString, cnn);
+            da.Fill(dttable);
+            cnn.Close();
+            return dttable;
+        }
     }
 }
