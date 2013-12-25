@@ -28,6 +28,7 @@ namespace BusinessLogicTier
             }
             return null;
         }
+
         public static int insertHoaDon(HoaDon m)
         {
             try
@@ -40,6 +41,7 @@ namespace BusinessLogicTier
             }
             return -1;
         }
+
         public static void insertChiTietHoaDon(ChiTietHoaDon m)
         {
             try
@@ -51,6 +53,7 @@ namespace BusinessLogicTier
                 MessageBox.Show(ex.Message, "Lỗi thêm chi tiết hóa đơn");
             }
         }
+
         public static void updateSoLuongSach(string MaSach, string SoLuong)
         {
             try
@@ -61,6 +64,16 @@ namespace BusinessLogicTier
             {
                 MessageBox.Show(ex.Message, "Lỗi thêm chi tiết hóa đơn");
             }
+        }
+
+        public static string layMaMax()
+        {
+            return BanHangDAO.LayMaMax();
+        }
+
+        public static string layMaMaxCT()
+        {
+            return BanHangDAO.LayMaMaxCT();
         }
     }
 }

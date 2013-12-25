@@ -42,11 +42,11 @@ namespace QuanLiNhaSachGUI
 
         internal void viewPhieuNhap(DataTable dt)
         {
-            CrystalReportPhieuNhap objRpt = new CrystalReportPhieuNhap();
-            objRpt.SetDataSource(dt);
-            crystalReportViewer1.ReportSource = objRpt;
-            crystalReportViewer1.Refresh();
-            this.Show();            
+            //CrystalReportPhieuNhap objRpt = new CrystalReportPhieuNhap();
+            //objRpt.SetDataSource(dt);
+            //crystalReportViewer1.ReportSource = objRpt;
+            //crystalReportViewer1.Refresh();
+            //this.Show();            
         }
 		public void viewTuaBan(DataTable dt)
         {

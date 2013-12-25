@@ -16,8 +16,10 @@ namespace PresentationTier
     public partial class frmPhieuNhap : Form
     {
         DataTable tb = new DataTable();
-        long tongtien;
+        ulong tongtien;
         Timer time = new Timer();
+        PhieuNhap data = new PhieuNhap();
+        TaoMa ma = new TaoMa();
 
         public frmPhieuNhap()
         {
@@ -44,41 +46,49 @@ namespace PresentationTier
             }
             else
             {
-                DataRow dr = tb.NewRow();
-                DataGridViewRow row = dataGridView1.SelectedRows[0];
-                dr[0] = row.Cells[0].Value.ToString();
-                dr[1] = row.Cells[1].Value.ToString();
-                dr[2] = row.Cells[2].Value.ToString();
-                dr[3] = row.Cells[3].Value.ToString();
-                dr[4] = txtSoLuong.Text.ToString();
-                dr[5] = (int.Parse(dr[3].ToString()) * int.Parse(dr[4].ToString())).ToString();
-
-                bool flag = true;
-                foreach (DataRow myRow in tb.Rows)
+                try
                 {
-                    if (dr[0].ToString() == myRow[0].ToString())
-                    {
-                        int temp = int.Parse(myRow[4].ToString()) + int.Parse(dr[4].ToString());
-                        myRow[4] = temp;
-                        myRow[5] = (int.Parse(myRow[3].ToString()) * int.Parse(myRow[4].ToString())).ToString();
-                        flag = false;
-                        break;
-                    }
-                }
-                if (flag) tb.Rows.Add(dr);
-                dataGridView2.Refresh();
+                    DataRow dr = tb.NewRow();
+                    DataGridViewRow row = dataGridView1.SelectedRows[0];
+                    dr[0] = row.Cells[0].Value.ToString();
+                    dr[1] = row.Cells[1].Value.ToString();
+                    dr[2] = row.Cells[2].Value.ToString();
+                    dr[3] = row.Cells[3].Value.ToString();
+                    dr[4] = txtSoLuong.Text.ToString();
+                    dr[5] = (int.Parse(dr[3].ToString()) * int.Parse(dr[4].ToString())).ToString();
 
-                UpdateTongTien();
+                    bool flag = true;
+                    foreach (DataRow myRow in tb.Rows)
+                    {
+                        if (dr[0].ToString() == myRow[0].ToString())
+                        {
+                            int temp = int.Parse(myRow[4].ToString()) + int.Parse(dr[4].ToString());
+                            myRow[4] = temp;
+                            myRow[5] = (int.Parse(myRow[3].ToString()) * int.Parse(myRow[4].ToString())).ToString();
+                            flag = false;
+                            break;
+                        }
+                    }
+                    if (flag) tb.Rows.Add(dr);
+                    dataGridView2.Refresh();
+
+                    UpdateTongTien();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi nhập số liệu");
+                }
             }
         }
 
         private void UpdateTongTien()
         {
             tongtien = 0;
-            for (int i = 0; i < dataGridView2.RowCount; i++)
+            foreach (DataRow myRow in tb.Rows)
             {
-                tongtien += long.Parse(dataGridView2.Rows[i].Cells[3].Value.ToString()) * long.Parse(dataGridView2.Rows[i].Cells[4].Value.ToString());
+                tongtien += ulong.Parse(myRow[5].ToString());
             }
+
             string st = tongtien.ToString();
             int len = st.Length;
             for (int i = len - 2; i > 0; i--)
@@ -86,34 +96,54 @@ namespace PresentationTier
                 if ((len - i) % 3 == 0)
                     st = st.Insert(i, ",");
             }
-            txtTongTien.Text = st;
-
+            txtTongTien.Text = st + " vnd";
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (dataGridView2.RowCount <= 0)
+            string mamax = NhapHangBUS.layMaMax();
+            if (mamax.Equals(""))
+            {
+                data.Id = "PN000001";
+            }
+            else
+            {
+                data.Id = ma.TaoMaTuDong(mamax, 2);
+            }
+
+            if (dataGridView2.RowCount <= 1)
             {
                 MessageBox.Show("Không có sản phẩm để lưu");
             }
             else
             {
-                PhieuNhap hd = new PhieuNhap();
-                hd.MaNhanVien = "1";
-                hd.TongTien = tongtien.ToString();
-                hd.Ngay = DateTime.Now.ToString();
+                //PhieuNhap hd = new PhieuNhap();
+                data.MaNhanVien = "NV006";
+                data.TongTien = tongtien.ToString();
+                data.Ngay = DateTime.Now.ToString();
 
-                int maHoaDon = NhapHangBUS.insertPhieuNhap(hd);
+                int maHoaDon = NhapHangBUS.insertPhieuNhap(data);
 
-                for (int i = 0; i < dataGridView2.RowCount; i++)
+                for (int i = 0; i < (dataGridView2.RowCount - 1); i++)
                 {
                     ChiTietPhieuNhap cthd = new ChiTietPhieuNhap();
-                    cthd.MaPhieuNhap = maHoaDon.ToString();
+                    string mamaxct = NhapHangBUS.layMaMaxCT();
+                    if (mamaxct.Equals(""))
+                    {
+                        cthd.Id = "CTPN000001";
+                    }
+                    else
+                    {
+                        cthd.Id = ma.TaoMaTuDong(mamaxct, 4);
+                    }
+                    cthd.MaPhieuNhap = data.Id;
+                    //string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
                     cthd.MaSach = dataGridView2.Rows[i].Cells[0].Value.ToString();
                     cthd.SoLuong = dataGridView2.Rows[i].Cells[4].Value.ToString();
                     NhapHangBUS.insertChiTietPhieuNhap(cthd);
                     NhapHangBUS.updateSoLuongSach(cthd.MaSach, cthd.SoLuong);
                 }
+
                 MessageBox.Show("Lưu thành công");
                 XuatPhieuNhap();
                 btnNhapMoi_Click(sender, e);
@@ -147,28 +177,29 @@ namespace PresentationTier
         {
             txtSoLuong.Text = "1";
             txtTimSach.Text = "";
+
+            dataGridView1.DataSource = null;
             dataGridView2.Refresh();
+            dataGridView1.DataSource = tb;
             dataGridView1.DataSource = null;
             dataGridView1.Refresh();
+
+            load();
         }
 
-        private void btnThoat_Click(object sender, EventArgs e)
+        private void load()
         {
-            this.Close();
-        }
+            dataGridView1.DataSource = NhapHangBUS.TimSach(txtTimSach.Text);
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-        private void frmPhieuNhap_Load(object sender, EventArgs e)
-        {
-            lbNgay.Text = DateTime.Now.ToString();
-            //lbNhanVien.Text = Auth.logged.Ten;
-            txtTongTien.Text = "";
-
+            tb = new DataTable();
             tb.Columns.Add("Mã");
             tb.Columns.Add("Tên Sách");
             tb.Columns.Add("Tác Giả");
             tb.Columns.Add("Đơn Giá");
             tb.Columns.Add("Số Lượng");
             tb.Columns.Add("Tiền");
+
             dataGridView2.DataSource = tb;
             dataGridView2.Columns[0].ReadOnly = true;
             dataGridView2.Columns[1].ReadOnly = true;
@@ -183,6 +214,20 @@ namespace PresentationTier
             dataGridView2.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView2.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView2.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmPhieuNhap_Load(object sender, EventArgs e)
+        {
+            lbNgay.Text = DateTime.Now.ToString();
+            //lbNhanVien.Text = Auth.logged.Ten;
+            txtTongTien.Text = "";
+
+            load();
         }
 
         private void txtTimSach_TextChanged(object sender, EventArgs e)
@@ -216,6 +261,27 @@ namespace PresentationTier
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView2.SelectedRows)
+            {
+                if (!row.IsNewRow)
+                {
+                    dataGridView2.Rows.Remove(row);
+                    UpdateTongTien();
+                }
+            }
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            txtSoLuong.Text = "1";
+            txtTimSach.Text = "";
+
+            dataGridView1.DataSource = NhapHangBUS.TimSach(txtTimSach.Text);
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }
