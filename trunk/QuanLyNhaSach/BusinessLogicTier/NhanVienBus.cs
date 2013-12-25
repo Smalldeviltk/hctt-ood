@@ -34,5 +34,17 @@ namespace BusinessLogicTier
         {
             return nvD.LayMaMax();
         }
+        public DataTable TimTheoTen(string tennv)
+        {
+            return nvD.TimTheoTen(tennv);
+        }
+        public DataTable TimTheoCMND(string cmnd)
+        {
+            return nvD.TimTheoCMND(cmnd);
+        }
+        public DataTable TimTheoNgaySinh(string ngaysinh)
+        {
+            return nvD.TimTheoNgaySinh(ngaysinh);
+        }
     }
 }

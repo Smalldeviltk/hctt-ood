@@ -98,6 +98,18 @@ namespace PresentationTier
             f.ShowDialog();
         }
 
+        private void btTimSach_Click(object sender, EventArgs e)
+        {
+            frmTimSach f= new frmTimSach();
+            f.ShowDialog();
+        }
+
+        private void btTimNV_Click(object sender, EventArgs e)
+        {
+            frmTimNhanVien f = new frmTimNhanVien();
+            f.ShowDialog();
+        }
+
 
      
 
