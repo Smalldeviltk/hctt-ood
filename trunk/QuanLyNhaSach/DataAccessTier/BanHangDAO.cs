@@ -18,6 +18,7 @@ namespace DataAccessTier
         private static string sql;
         private static DataTable dt;
         static DAOHelper helper = new DAOHelper();
+        private static SqlConnection cnn;
 
         public DataTable TimSach(string str)
         {
@@ -30,10 +31,11 @@ namespace DataAccessTier
         }
         public int insertHoaDon(HoaDon m)
         {
-            sql = "INSERT INTO HoaDon(MaNhanVien,TongTien,Ngay) VALUES(@MaNhanVien,@TongTien,@Ngay)";
+            sql = "INSERT INTO HoaDon(id,MaNhanVien,TongTien,Ngay) VALUES(@id,@MaNhanVien,@TongTien,@Ngay)";
             cmd = new SqlCommand();
             cmd.CommandText = sql;
             cmd.Connection = helper.GetConnect();
+            cmd.Parameters.AddWithValue("@id", m.Id);
             cmd.Parameters.AddWithValue("@MaNhanVien", m.MaNhanVien);
             cmd.Parameters.AddWithValue("@TongTien", m.TongTien);
             cmd.Parameters.AddWithValue("@Ngay", m.Ngay);
@@ -47,6 +49,58 @@ namespace DataAccessTier
 
             return insertID;
         }
+
+        public static string LayMaMax()
+        {
+            string mamax = "";
+            cnn = helper.GetConnect();
+            string sql = "SELECT TOP 1 id FROM HOADON ORDER BY id DESC";
+            SqlCommand cmd = new SqlCommand();
+            cmd = new SqlCommand(sql, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    mamax = (dr["id"].ToString());
+
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong lay duoc ma max");
+                }
+
+            }
+            cnn.Close();
+            return mamax;
+        }
+
+        public static string LayMaMaxCT()
+        {
+            string mamax = "";
+            cnn = helper.GetConnect();
+            string sql = "SELECT TOP 1 id FROM CHITIETHOADON ORDER BY id DESC";
+            SqlCommand cmd = new SqlCommand();
+            cmd = new SqlCommand(sql, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    mamax = (dr["id"].ToString());
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong lay duoc ma max");
+                }
+
+            }
+            cnn.Close();
+            return mamax;
+        }
+
         public void updateSoLuongSach(string MaSach, string SoLuong)
         {
             sql = "update SACH set SoLuong=SoLuong-@SoLuong where id=@id";
@@ -55,12 +109,14 @@ namespace DataAccessTier
             scmd.Parameters.AddWithValue("@id", MaSach);
             scmd.ExecuteNonQuery();
         }
+
         public void insertChiTietHoaDon(ChiTietHoaDon m)
         {
-            sql = "INSERT INTO ChiTietHoaDon(MaHoaDon,MaSach,SoLuong) VALUES(@MaHoaDon,@MaSach,@SoLuong)";
+            sql = "INSERT INTO ChiTietHoaDon(id,MaHoaDon,MaSach,SoLuong) VALUES(@id,@MaHoaDon,@MaSach,@SoLuong)";
             cmd = new SqlCommand();
             cmd.CommandText = sql;
             cmd.Connection = helper.GetConnect();
+            cmd.Parameters.AddWithValue("@id", m.Id);
             cmd.Parameters.AddWithValue("@MaHoaDon", m.MaHoaDon);
             cmd.Parameters.AddWithValue("@MaSach", m.MaSach);
             cmd.Parameters.AddWithValue("@SoLuong", m.SoLuong);

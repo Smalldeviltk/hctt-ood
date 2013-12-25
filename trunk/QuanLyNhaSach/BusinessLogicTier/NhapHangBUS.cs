@@ -25,6 +25,7 @@ namespace BusinessLogicTier
             }
             return null;
         }
+
         public static int insertPhieuNhap(PhieuNhap m)
         {
             try
@@ -33,10 +34,11 @@ namespace BusinessLogicTier
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Lỗi thêm hóa đơn");
+                MessageBox.Show(ex.Message, "Lỗi thêm phiếu nhập");
             }
             return -1;
         }
+
         public static void insertChiTietPhieuNhap(ChiTietPhieuNhap m)
         {
             try
@@ -45,9 +47,10 @@ namespace BusinessLogicTier
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Lỗi thêm chi tiết hóa đơn");
+                MessageBox.Show(ex.Message, "Lỗi thêm chi tiết phiếu nhập");
             }
         }
+
         public static void updateSoLuongSach(string MaSach, string SoLuong)
         {
             try
@@ -58,6 +61,16 @@ namespace BusinessLogicTier
             {
                 MessageBox.Show(ex.Message, "Lỗi thêm chi tiết hóa đơn");
             }
+        }
+
+        public static string layMaMax()
+        {
+            return NhapHangDAO.LayMaMax();
+        }
+
+        public static string layMaMaxCT()
+        {
+            return NhapHangDAO.LayMaMaxCT();
         }
     }
 }

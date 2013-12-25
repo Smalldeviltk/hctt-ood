@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,6 +35,7 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnNew = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnNhapMoi = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -48,6 +48,7 @@
             this.lbNgay = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnXoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -56,21 +57,10 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(471, 24);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 33);
-            this.btnSearch.TabIndex = 19;
-            this.btnSearch.Text = "Tìm";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(679, 468);
+            this.btnThoat.Location = new System.Drawing.Point(690, 469);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 33);
             this.btnThoat.TabIndex = 26;
@@ -109,7 +99,7 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(71, 120);
+            this.btnThem.Location = new System.Drawing.Point(20, 126);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 33);
             this.btnThem.TabIndex = 18;
@@ -128,6 +118,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnNew);
             this.groupBox4.Controls.Add(this.btnThem);
             this.groupBox4.Controls.Add(this.txtSoLuong);
             this.groupBox4.Controls.Add(this.label1);
@@ -136,6 +127,17 @@
             this.groupBox4.Size = new System.Drawing.Size(200, 176);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
+            // 
+            // btnNew
+            // 
+            this.btnNew.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Location = new System.Drawing.Point(112, 126);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 33);
+            this.btnNew.TabIndex = 19;
+            this.btnNew.Text = "Mới";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // label1
             // 
@@ -150,7 +152,7 @@
             // btnNhapMoi
             // 
             this.btnNhapMoi.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhapMoi.Location = new System.Drawing.Point(534, 469);
+            this.btnNhapMoi.Location = new System.Drawing.Point(462, 470);
             this.btnNhapMoi.Name = "btnNhapMoi";
             this.btnNhapMoi.Size = new System.Drawing.Size(109, 31);
             this.btnNhapMoi.TabIndex = 27;
@@ -160,7 +162,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnSearch);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.txtTimSach);
@@ -183,13 +184,14 @@
             // 
             this.txtTimSach.Location = new System.Drawing.Point(35, 34);
             this.txtTimSach.Name = "txtTimSach";
-            this.txtTimSach.Size = new System.Drawing.Size(413, 20);
+            this.txtTimSach.Size = new System.Drawing.Size(495, 20);
             this.txtTimSach.TabIndex = 4;
+            this.txtTimSach.TextChanged += new System.EventHandler(this.txtTimSach_TextChanged);
             // 
             // btnLuu
             // 
             this.btnLuu.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Location = new System.Drawing.Point(413, 468);
+            this.btnLuu.Location = new System.Drawing.Point(597, 470);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 33);
             this.btnLuu.TabIndex = 22;
@@ -260,17 +262,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin";
             // 
+            // btnXoa
+            // 
+            this.btnXoa.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(365, 470);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 33);
+            this.btnXoa.TabIndex = 20;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // frmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(855, 515);
+            this.ClientSize = new System.Drawing.Size(798, 515);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnNhapMoi);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmBanHang";
@@ -292,7 +306,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label2;
@@ -312,6 +325,8 @@
         private System.Windows.Forms.Label lbNgay;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnXoa;
 
 
     }
