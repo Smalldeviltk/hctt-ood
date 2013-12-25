@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PresentationTier.Report {
+namespace PresentationTier.CR {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace PresentationTier.Report {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rptBaocaonhaphang : ReportClass {
+    public class TonKho : ReportClass {
         
-        public rptBaocaonhaphang() {
+        public TonKho() {
         }
         
         public override string ResourceName {
             get {
-                return "rptBaocaonhaphang.rpt";
+                return "TonKho.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace PresentationTier.Report {
         
         public override string FullResourceName {
             get {
-                return "PresentationTier.Report.rptBaocaonhaphang.rpt";
+                return "PresentationTier.CR.TonKho.rpt";
             }
             set {
                 // Do nothing
@@ -87,28 +87,12 @@ namespace PresentationTier.Report {
                 return this.ReportDefinition.Sections[4];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_tu {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_den {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedrptBaocaonhaphang : Component, ICachedReport {
+    public class CachedTonKho : Component, ICachedReport {
         
-        public CachedrptBaocaonhaphang() {
+        public CachedTonKho() {
         }
         
         [Browsable(false)]
@@ -145,7 +129,7 @@ namespace PresentationTier.Report {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rptBaocaonhaphang rpt = new rptBaocaonhaphang();
+            TonKho rpt = new TonKho();
             rpt.Site = this.Site;
             return rpt;
         }

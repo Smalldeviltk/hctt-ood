@@ -23,11 +23,11 @@ namespace PresentationTier
 
         private void btTTLoai_Click(object sender, EventArgs e)
         {
-            ReportClass rpt ;
-            if (rdNhap.Checked)         
-               rpt = new Report.rptTheoTheLoai_Nhap();
-            else rpt = new Report.rptTheoTheLoai_Xuat();       
-     
+            ReportClass rpt;
+            if (rdNhap.Checked)
+                rpt = new Report.rptTheoTheLoai_Nhap();
+            else rpt = new Report.rptTheoTheLoai_Xuat();
+
             //------------
             frmReport f = new frmReport();
             rpt.SetParameterValue("den", dtpNNDen.Value);
