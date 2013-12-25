@@ -38,5 +38,29 @@ namespace BusinessLogicTier
         {
             return sD.LayMaMax();
         }
+        public DataTable TimSachTheoTen(string tensach)
+        {
+            return sD.TimSachTheoTen(tensach);
+        }
+        public DataTable TimSachTheoGiaBanTrongKhoang(string giatu, string giaden)
+        {
+            return sD.TimSachTheoGiaBanTrongKhoang(giatu, giaden);
+        }
+        public DataTable TimSachTheoGiaBanTu(string gia)
+        {
+            return sD.TimSachTheoGiaBanTu(gia);
+        }
+        public DataTable TimSachTheoGiaBanDen(string gia)
+        {
+            return sD.TimSachTheoGiaBanDen(gia);
+        }
+        public DataTable TimSachTheoTacGia(string matacgia)
+        {
+            return sD.TimSachTheoTacGia(matacgia);
+        }
+        public DataTable TimSachTheoTenVaTacGia(string matacgia, string tensach)
+        {
+            return sD.TimSachTheoTenVaTacGia(matacgia, tensach);
+        }
     }
 }
