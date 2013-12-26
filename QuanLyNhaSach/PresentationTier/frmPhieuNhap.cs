@@ -64,7 +64,7 @@ namespace PresentationTier
                         {
                             int temp = int.Parse(myRow[4].ToString()) + int.Parse(dr[4].ToString());
                             myRow[4] = temp;
-                            myRow[5] = (int.Parse(myRow[3].ToString()) * int.Parse(myRow[4].ToString())).ToString();
+                            myRow[5] = (ulong.Parse(myRow[3].ToString()) * ulong.Parse(myRow[4].ToString())).ToString();
                             flag = false;
                             break;
                         }
@@ -177,6 +177,7 @@ namespace PresentationTier
         {
             txtSoLuong.Text = "1";
             txtTimSach.Text = "";
+            txtTongTien.Text = "0 vnd";
 
             dataGridView1.DataSource = null;
             dataGridView2.Refresh();
@@ -225,7 +226,7 @@ namespace PresentationTier
         {
             lbNgay.Text = DateTime.Now.ToString();
             //lbNhanVien.Text = Auth.logged.Ten;
-            txtTongTien.Text = "";
+            txtTongTien.Text = "0 vnd";
 
             load();
         }

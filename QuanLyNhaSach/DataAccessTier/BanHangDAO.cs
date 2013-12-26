@@ -38,16 +38,18 @@ namespace DataAccessTier
             cmd.Parameters.AddWithValue("@id", m.Id);
             cmd.Parameters.AddWithValue("@MaNhanVien", m.MaNhanVien);
             cmd.Parameters.AddWithValue("@TongTien", m.TongTien);
-            cmd.Parameters.AddWithValue("@Ngay", m.Ngay);
+            //cmd.Parameters.AddWithValue("@Ngay", m.Ngay);
+            DateTime date = Convert.ToDateTime(m.Ngay);
+            cmd.Parameters.AddWithValue("@Ngay", date);
             cmd.ExecuteNonQuery();
 
             cmd.Parameters.Clear();
             cmd.CommandText = "SELECT @@IDENTITY";
-            int insertID = Convert.ToInt32(cmd.ExecuteScalar());
+            //int insertID = Convert.ToInt32(cmd.ExecuteScalar());
             cmd.Dispose();
             cmd = null;
 
-            return insertID;
+            return 1;
         }
 
         public static string LayMaMax()

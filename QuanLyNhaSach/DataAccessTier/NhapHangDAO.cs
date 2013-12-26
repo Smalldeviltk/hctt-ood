@@ -41,7 +41,8 @@ namespace DataAccessTier
 
             cmd.Parameters.Clear();
             cmd.CommandText = "SELECT @@IDENTITY";
-            int insertID = Convert.ToInt32(cmd.ExecuteScalar());
+            //int insertID = Convert.ToInt32(cmd.ExecuteScalar());
+            int insertID = 1;
             cmd.Dispose();
             cmd = null;
 

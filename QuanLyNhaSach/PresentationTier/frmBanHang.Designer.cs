@@ -72,9 +72,9 @@
             // 
             this.txtTongTien.Enabled = false;
             this.txtTongTien.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongTien.Location = new System.Drawing.Point(154, 469);
+            this.txtTongTien.Location = new System.Drawing.Point(120, 471);
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(176, 30);
+            this.txtTongTien.Size = new System.Drawing.Size(210, 30);
             this.txtTongTien.TabIndex = 25;
             this.txtTongTien.Text = "0";
             // 
@@ -82,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 472);
+            this.label2.Location = new System.Drawing.Point(12, 474);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 23);
             this.label2.TabIndex = 24;
