@@ -17,7 +17,7 @@ namespace PresentationTier
     {
 
 
-        PhieuNhapBUS bus = new PhieuNhapBUS();
+        BaoCaoBUS bus = new BaoCaoBUS();
         public frmBaoCaoNhapHang()
         {
             InitializeComponent();
@@ -29,14 +29,7 @@ namespace PresentationTier
         private void btInBaoCao_Click(object sender, EventArgs e)
         {
 
-            DataTable dt = bus.LaydsTheoNgay(dtpNNTu.Value,dtpNNDen.Value);
-            Report.rptBaoCaoNhapHang rpt = new Report.rptBaoCaoNhapHang();
-            //-----------
-          //  rpt.SetDataSource(dt);
-
-            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
-            f.Text = "Báo cáo nhập hàng";
-            f.Show();
+            dgvThongKe.DataSource = bus.BaoCao_Nhap(dtpNNTu.Value, dtpNNDen.Value);
         }
 
         private void dtpNNTu_ValueChanged(object sender, EventArgs e)
@@ -47,6 +40,15 @@ namespace PresentationTier
         private void dtpNNDen_ValueChanged(object sender, EventArgs e)
         {
             dtpNNDen.Value = dtpNNDen.Value > dtpNNTu.Value ? dtpNNDen.Value : dtpNNTu.Value;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Report.rptBaoCaoNhapHang rpt = new Report.rptBaoCaoNhapHang();
+            //-----------
+            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
+            f.Text = "Báo cáo nhập hàng";
+            f.Show();
         }
         
     }

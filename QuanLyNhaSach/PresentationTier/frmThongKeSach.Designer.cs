@@ -40,6 +40,10 @@
             this.rdNhap = new System.Windows.Forms.RadioButton();
             this.rdXuat = new System.Windows.Forms.RadioButton();
             this.btTTGia = new System.Windows.Forms.Button();
+            this.dgvThongKe = new System.Windows.Forms.DataGridView();
+            this.btIn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -80,7 +84,7 @@
             // 
             // btTTLoai
             // 
-            this.btTTLoai.Location = new System.Drawing.Point(120, 223);
+            this.btTTLoai.Location = new System.Drawing.Point(119, 120);
             this.btTTLoai.Name = "btTTLoai";
             this.btTTLoai.Size = new System.Drawing.Size(122, 23);
             this.btTTLoai.TabIndex = 14;
@@ -90,7 +94,7 @@
             // 
             // btTTDe
             // 
-            this.btTTDe.Location = new System.Drawing.Point(280, 223);
+            this.btTTDe.Location = new System.Drawing.Point(279, 120);
             this.btTTDe.Name = "btTTDe";
             this.btTTDe.Size = new System.Drawing.Size(122, 23);
             this.btTTDe.TabIndex = 15;
@@ -100,7 +104,7 @@
             // 
             // btTNVien
             // 
-            this.btTNVien.Location = new System.Drawing.Point(447, 223);
+            this.btTNVien.Location = new System.Drawing.Point(446, 120);
             this.btTNVien.Name = "btTNVien";
             this.btTNVien.Size = new System.Drawing.Size(122, 23);
             this.btTNVien.TabIndex = 16;
@@ -110,7 +114,7 @@
             // 
             // btNCC
             // 
-            this.btNCC.Location = new System.Drawing.Point(159, 300);
+            this.btNCC.Location = new System.Drawing.Point(158, 197);
             this.btNCC.Name = "btNCC";
             this.btNCC.Size = new System.Drawing.Size(122, 23);
             this.btNCC.TabIndex = 17;
@@ -120,7 +124,7 @@
             // 
             // btNXB
             // 
-            this.btNXB.Location = new System.Drawing.Point(312, 300);
+            this.btNXB.Location = new System.Drawing.Point(311, 197);
             this.btNXB.Name = "btNXB";
             this.btNXB.Size = new System.Drawing.Size(122, 23);
             this.btNXB.TabIndex = 18;
@@ -153,7 +157,7 @@
             // 
             // btTTGia
             // 
-            this.btTTGia.Location = new System.Drawing.Point(448, 291);
+            this.btTTGia.Location = new System.Drawing.Point(447, 188);
             this.btTTGia.Name = "btTTGia";
             this.btTTGia.Size = new System.Drawing.Size(122, 23);
             this.btTTGia.TabIndex = 21;
@@ -161,11 +165,44 @@
             this.btTTGia.UseVisualStyleBackColor = true;
             this.btTTGia.Click += new System.EventHandler(this.btTTGia_Click);
             // 
+            // dgvThongKe
+            // 
+            this.dgvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThongKe.Location = new System.Drawing.Point(51, 311);
+            this.dgvThongKe.Name = "dgvThongKe";
+            this.dgvThongKe.ReadOnly = true;
+            this.dgvThongKe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvThongKe.Size = new System.Drawing.Size(532, 211);
+            this.dgvThongKe.TabIndex = 22;
+            // 
+            // btIn
+            // 
+            this.btIn.Location = new System.Drawing.Point(257, 528);
+            this.btIn.Name = "btIn";
+            this.btIn.Size = new System.Drawing.Size(122, 23);
+            this.btIn.TabIndex = 23;
+            this.btIn.Text = "In thống kê";
+            this.btIn.UseVisualStyleBackColor = true;
+            this.btIn.Click += new System.EventHandler(this.btIn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(288, 254);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Thống kê";
+            // 
             // frmThongKeSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 377);
+            this.ClientSize = new System.Drawing.Size(660, 588);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btIn);
+            this.Controls.Add(this.dgvThongKe);
             this.Controls.Add(this.btTTGia);
             this.Controls.Add(this.rdXuat);
             this.Controls.Add(this.rdNhap);
@@ -180,6 +217,7 @@
             this.Controls.Add(this.dtpNNTu);
             this.Name = "frmThongKeSach";
             this.Text = "frmThongKeSach";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +237,8 @@
         private System.Windows.Forms.RadioButton rdNhap;
         private System.Windows.Forms.RadioButton rdXuat;
         private System.Windows.Forms.Button btTTGia;
+        private System.Windows.Forms.DataGridView dgvThongKe;
+        private System.Windows.Forms.Button btIn;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -14,8 +14,8 @@ namespace PresentationTier
     public partial class frmThongKeSach : Form
     {
 
-        PhieuNhapBUS busPn = new PhieuNhapBUS();
-        HoaDonBUS busHd = new HoaDonBUS();
+        BaoCaoBUS busBc = new BaoCaoBUS();
+        int type=0;
         public frmThongKeSach()
         {
             InitializeComponent();
@@ -31,83 +31,149 @@ namespace PresentationTier
         }
         private void btTTLoai_Click(object sender, EventArgs e)
         {
-            ReportClass rpt ;
+            //1---
+            label3.Text = "Theo thể loại";
             if (rdNhap.Checked)         
-               rpt = new Report.rptTheoTheLoai_Nhap();
-            else rpt = new Report.rptTheoTheLoai_Xuat();
+            {
+                dgvThongKe.DataSource = busBc.TheoTheLoai_Nhap(dtpNNTu.Value, dtpNNDen.Value);
+                type = 1;
+            }
+            else
+            {
+                dgvThongKe.DataSource = busBc.TheoTheLoai_Xuat(dtpNNTu.Value, dtpNNDen.Value);
+                type = -1;
+            }
 
-            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
 
-            f.Text = "Báo cáo theo thể loại";
-            f.Show();     
 
-        }
-
-    
+        }  
 
         private void btTTDe_Click(object sender, EventArgs e)
         {
-            ReportClass rpt;
+            label3.Text = "Theo tựa đề";
+            //2
             if (rdNhap.Checked)
-                rpt = new Report.rptTheoTuaDe_Nhap();
-            else rpt = new Report.rptTheoTuaDe_Xuat();
-
-            //------------
-            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
-            f.Text = "Báo cáo theo tựa đề";
-            f.Show();
+            {
+                dgvThongKe.DataSource = busBc.TheoTuaDe_Nhap(dtpNNTu.Value, dtpNNDen.Value);
+                type = 2;
+            }
+            else
+            {
+                dgvThongKe.DataSource = busBc.TheoTuaDe_Xuat(dtpNNTu.Value, dtpNNDen.Value);
+                type = -2;
+            }
         }
 
         private void btTNVien_Click(object sender, EventArgs e)
         {
-            ReportClass rpt;
+            //6
+            label3.Text = "Theo Nhân viên";
             if (rdNhap.Checked)
-                rpt = new Report.rptTheoNhanVien_Nhap();
-            else rpt = new Report.rptTheoNhanVien_Xuat();
-
-            //------------
-            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
-            f.Text = "Báo cáo theo nhân viên";
-            f.Show();
+            {
+                dgvThongKe.DataSource = busBc.TheoNhanVien_Nhap(dtpNNTu.Value, dtpNNDen.Value);
+                type = 6 ;
+            }
+            else
+            {
+                dgvThongKe.DataSource = busBc.TheoNhanVien_Xuat(dtpNNTu.Value, dtpNNDen.Value);
+                type = -6;
+            }
         }
 
         private void btNCC_Click(object sender, EventArgs e)
         {
-            ReportClass rpt;
+            //3
+            label3.Text = "Theo Nhà cung cấp";
             if (rdNhap.Checked)
-                rpt = new Report.rptTheoNCC_Nhap();
-            else rpt = new Report.rptTheoNCC_Xuat();
-
-            //------------
-            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
-            f.Text = "Báo cáo theo nhà cung cấp";
-            f.Show();
+            {
+                dgvThongKe.DataSource = busBc.TheoNCC_Nhap(dtpNNTu.Value, dtpNNDen.Value);
+                type = 3;
+            }
+            else
+            {
+                dgvThongKe.DataSource = busBc.TheoNCC_Xuat(dtpNNTu.Value, dtpNNDen.Value);
+                type = -3;
+            }
         }
 
         private void btNXB_Click(object sender, EventArgs e)
         {
-            ReportClass rpt;
+            //4
+            label3.Text = "Theo nhà xuất bản";
             if (rdNhap.Checked)
-                rpt = new Report.rptTheoNXB_Nhap();
-            else rpt = new Report.rptTheoNXB_Xuat();
-
-            //------------
-            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
-            f.Text = "Báo cáo theo nhà xuất bản";
-            f.Show();
+            {
+                dgvThongKe.DataSource = busBc.TheoNXB_Nhap(dtpNNTu.Value, dtpNNDen.Value);
+                type = 4;
+            }
+            else
+            {
+                dgvThongKe.DataSource = busBc.TheoNXB_Xuat(dtpNNTu.Value, dtpNNDen.Value);
+                type = -4;
+            }
         }
 
         private void btTTGia_Click(object sender, EventArgs e)
         {
-            ReportClass rpt;
+            //5
+            label3.Text = "Theo tác giả";
             if (rdNhap.Checked)
-                rpt = new Report.rptTheoTacGia_Nhap();
-            else rpt = new Report.rptTheoTacGia_Xuat();
+            {
+                dgvThongKe.DataSource = busBc.TheoTacGia_Nhap(dtpNNTu.Value, dtpNNDen.Value);
+                type = 5;
+            }
+            else
+            {
+                dgvThongKe.DataSource = busBc.TheoTacGia_Xuat(dtpNNTu.Value, dtpNNDen.Value);
+                type = -5;
+            }
+        }
 
-            //------------
+        private void btIn_Click(object sender, EventArgs e)
+        {
+            ReportClass rpt=null;
+            switch (type)
+            {
+                case 1: rpt = new Report.rptTheoTheLoai_Nhap();
+                    break;
+
+                case -1: rpt = new Report.rptTheoTheLoai_Xuat();
+                    break;
+
+                case 2: rpt = new Report.rptTheoTuaDe_Nhap();
+                    break;
+
+                case -2: rpt = new Report.rptTheoTuaDe_Xuat();
+                    break;
+
+                case 3: rpt = new Report.rptTheoNCC_Nhap();
+                    break;
+
+                case -3: rpt = new Report.rptTheoNCC_Xuat();
+                    break;
+
+                case 4: rpt = new Report.rptTheoNXB_Nhap();
+                    break;
+
+                case -4: rpt = new Report.rptTheoNXB_Xuat();
+                    break;
+
+                case 5: rpt = new Report.rptTheoTacGia_Nhap();
+                    break;
+
+                case -5: rpt = new Report.rptTheoTacGia_Xuat();
+                    break;
+
+                case 6: rpt = new Report.rptTheoNhanVien_Nhap();
+                    break;
+
+                case -6: rpt = new Report.rptTheoNhanVien_Xuat();
+                    break;
+                case 0:
+                    return;
+            }
+
             frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
-            f.Text = "Báo cáo theo tác giả";
-            f.Show();
+            f.Show();     
         }
 
 
