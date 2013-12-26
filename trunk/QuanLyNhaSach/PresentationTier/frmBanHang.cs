@@ -56,27 +56,45 @@ namespace PresentationTier
                     dr[3] = row.Cells[3].Value.ToString();
                     dr[4] = txtSoLuong.Text.ToString();
                     dr[5] = (int.Parse(dr[3].ToString()) * int.Parse(dr[4].ToString())).ToString();
+                    string str = row.Cells[4].Value.ToString();
+                    int tmpSL = Int32.Parse(str);
+                    int tmp = Int32.Parse(txtSoLuong.Text.ToString());
 
-                    bool flag = true;
-                    foreach (DataRow myRow in tb.Rows)
+                    for (int i = 0; i < (dataGridView2.RowCount - 1); i++)
                     {
-                        if (dr[0].ToString() == myRow[0].ToString())
+                        if (row.Cells[0].Value.ToString() == dataGridView2.Rows[i].Cells[0].Value.ToString())
                         {
-                            int temp = int.Parse(myRow[4].ToString()) + int.Parse(dr[4].ToString());
-                            myRow[4] = temp;
-                            myRow[5] = (int.Parse(myRow[3].ToString()) * int.Parse(myRow[4].ToString())).ToString();
-                            flag = false;
-                            break;
+                            tmp += Int32.Parse(dataGridView2.Rows[i].Cells[4].Value.ToString());
                         }
                     }
-                    if (flag) tb.Rows.Add(dr);
-                    dataGridView2.Refresh();
 
-                    UpdateTongTien();
+                    if (tmpSL >= tmp)
+                    {
+                        bool flag = true;
+                        foreach (DataRow myRow in tb.Rows)
+                        {
+                            if (dr[0].ToString() == myRow[0].ToString())
+                            {
+                                int temp = int.Parse(myRow[4].ToString()) + int.Parse(dr[4].ToString());
+                                myRow[4] = temp;
+                                myRow[5] = (ulong.Parse(myRow[3].ToString()) * ulong.Parse(myRow[4].ToString())).ToString();
+                                flag = false;
+                                break;
+                            }
+                        }
+                        if (flag) tb.Rows.Add(dr);
+                        dataGridView2.Refresh();
+
+                        UpdateTongTien();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mặt hàng \"" + row.Cells[1].Value.ToString() + "\" không còn đủ số lượng cần.", "Chú ý");
+                    }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi nhập số liệu");
+                    MessageBox.Show(ex.Message, "Lỗi nhập số liệu");
                 }
             }
         }
@@ -177,6 +195,7 @@ namespace PresentationTier
         {
             txtSoLuong.Text = "1";
             txtTimSach.Text = "";
+            txtTongTien.Text = "0 vnd";
 
             dataGridView1.DataSource = null;
             dataGridView2.Refresh();
@@ -225,7 +244,7 @@ namespace PresentationTier
         {
             lbNgay.Text = DateTime.Now.ToString();
             //lbNhanVien.Text = Auth.logged.Ten;
-            txtTongTien.Text = "";
+            txtTongTien.Text = "0 vnd";
 
             load();
         }
