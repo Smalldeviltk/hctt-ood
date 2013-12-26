@@ -20,23 +20,6 @@ namespace PresentationTier
         {
             InitializeComponent();
         }
-
-        private void btTTLoai_Click(object sender, EventArgs e)
-        {
-            ReportClass rpt;
-            if (rdNhap.Checked)
-                rpt = new Report.rptTheoTheLoai_Nhap();
-            else rpt = new Report.rptTheoTheLoai_Xuat();
-
-            //------------
-            frmReport f = new frmReport();
-            rpt.SetParameterValue("den", dtpNNDen.Value);
-            rpt.SetParameterValue("tu", dtpNNTu.Value);
-            f.cryRViewer.ReportSource = rpt;
-            f.Text = "Báo cáo theo thể loại";
-            f.Show();
-        }
-
         private void dtpNNTu_ValueChanged(object sender, EventArgs e)
         {
             dtpNNDen.Value = dtpNNDen.Value > dtpNNTu.Value ? dtpNNDen.Value : dtpNNTu.Value;
@@ -46,6 +29,21 @@ namespace PresentationTier
         {
             dtpNNDen.Value = dtpNNDen.Value > dtpNNTu.Value ? dtpNNDen.Value : dtpNNTu.Value;
         }
+        private void btTTLoai_Click(object sender, EventArgs e)
+        {
+            ReportClass rpt ;
+            if (rdNhap.Checked)         
+               rpt = new Report.rptTheoTheLoai_Nhap();
+            else rpt = new Report.rptTheoTheLoai_Xuat();
+
+            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
+
+            f.Text = "Báo cáo theo thể loại";
+            f.Show();     
+
+        }
+
+    
 
         private void btTTDe_Click(object sender, EventArgs e)
         {
@@ -55,10 +53,7 @@ namespace PresentationTier
             else rpt = new Report.rptTheoTuaDe_Xuat();
 
             //------------
-            frmReport f = new frmReport();
-            rpt.SetParameterValue("den", dtpNNDen.Value);
-            rpt.SetParameterValue("tu", dtpNNTu.Value);
-            f.cryRViewer.ReportSource = rpt;
+            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
             f.Text = "Báo cáo theo tựa đề";
             f.Show();
         }
@@ -71,10 +66,7 @@ namespace PresentationTier
             else rpt = new Report.rptTheoNhanVien_Xuat();
 
             //------------
-            frmReport f = new frmReport();
-            rpt.SetParameterValue("den", dtpNNDen.Value);
-            rpt.SetParameterValue("tu", dtpNNTu.Value);
-            f.cryRViewer.ReportSource = rpt;
+            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
             f.Text = "Báo cáo theo nhân viên";
             f.Show();
         }
@@ -87,10 +79,7 @@ namespace PresentationTier
             else rpt = new Report.rptTheoNCC_Xuat();
 
             //------------
-            frmReport f = new frmReport();
-            rpt.SetParameterValue("den", dtpNNDen.Value);
-            rpt.SetParameterValue("tu", dtpNNTu.Value);
-            f.cryRViewer.ReportSource = rpt;
+            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
             f.Text = "Báo cáo theo nhà cung cấp";
             f.Show();
         }
@@ -103,10 +92,7 @@ namespace PresentationTier
             else rpt = new Report.rptTheoNXB_Xuat();
 
             //------------
-            frmReport f = new frmReport();
-            rpt.SetParameterValue("den", dtpNNDen.Value);
-            rpt.SetParameterValue("tu", dtpNNTu.Value);
-            f.cryRViewer.ReportSource = rpt;
+            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
             f.Text = "Báo cáo theo nhà xuất bản";
             f.Show();
         }
@@ -119,12 +105,11 @@ namespace PresentationTier
             else rpt = new Report.rptTheoTacGia_Xuat();
 
             //------------
-            frmReport f = new frmReport();
-            rpt.SetParameterValue("den", dtpNNDen.Value);
-            rpt.SetParameterValue("tu", dtpNNTu.Value);
-            f.cryRViewer.ReportSource = rpt;
+            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
             f.Text = "Báo cáo theo tác giả";
             f.Show();
         }
+
+
     }
 }
