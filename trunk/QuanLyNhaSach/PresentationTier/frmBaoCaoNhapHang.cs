@@ -28,17 +28,15 @@ namespace PresentationTier
         }
         private void btInBaoCao_Click(object sender, EventArgs e)
         {
-            /*frmReport.*/
-            //DataTable dt = bus.LaydsTheoNgay(dtpNNTu.Value,dtpNNDen.Value);
-            //Report.rptBaoCaoNhapHang rpt = new Report.rptBaoCaoNhapHang();
-            ////-----------
-            //rpt.SetDataSource(dt);
-            //frmReport f = new frmReport();
-            //rpt.SetParameterValue("tu", dtpNNTu.Value);
-            //rpt.SetParameterValue("den", dtpNNDen.Value);
-            //f.cryRViewer.ReportSource = rpt;
-            //f.Text = "Báo cáo nhập hàng";
-            //f.Show();
+
+            DataTable dt = bus.LaydsTheoNgay(dtpNNTu.Value,dtpNNDen.Value);
+            Report.rptBaoCaoNhapHang rpt = new Report.rptBaoCaoNhapHang();
+            //-----------
+          //  rpt.SetDataSource(dt);
+
+            frmReport f = new frmReport(rpt, dtpNNTu.Value, dtpNNDen.Value);
+            f.Text = "Báo cáo nhập hàng";
+            f.Show();
         }
 
         private void dtpNNTu_ValueChanged(object sender, EventArgs e)

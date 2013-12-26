@@ -22,5 +22,9 @@ namespace BusinessLogicTier
         {
             DAOHelper.WriteFile(server, data, uid, pass);
         }
+        public string GetAccount()
+        {
+            return this.helper.Server + " " + helper.Database + " " + helper.UserName + " " + helper.Password;
+        }
     }
 }

@@ -368,10 +368,10 @@
       <DependentUpon>rptBaoCaoBanHang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\rptBaocaonhaphang.cs">
+    <Compile Include="Report\rptBaoCaoNhapHang1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>rptBaocaonhaphang.rpt</DependentUpon>
+      <DependentUpon>rptBaoCaoNhapHang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\rptTheoNCC_Nhap.cs">
@@ -444,12 +444,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptTheoTuaDe_Xuat.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="rptBaocaonhaphang.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptBaocaonhaphang.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="CrystalReportHoaDon.rpt">
@@ -619,9 +613,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptBaoCaoBanHang.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\rptBaocaonhaphang.rpt">
+    <EmbeddedResource Include="Report\rptBaoCaoNhapHang.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptBaocaonhaphang.cs</LastGenOutput>
+      <LastGenOutput>rptBaoCaoNhapHang1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\rptTheoNCC_Nhap.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -670,10 +664,6 @@
     <EmbeddedResource Include="Report\rptTheoTuaDe_Xuat.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptTheoTuaDe_Xuat.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="rptBaocaonhaphang.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptBaocaonhaphang.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="bin\Debug\ConnectString.con" />
