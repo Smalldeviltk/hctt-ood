@@ -669,6 +669,7 @@
     <None Include="bin\Debug\ConnectString.con" />
     <None Include="bin\Debug\PresentationTier.vshost.exe.config" />
     <None Include="bin\Debug\PresentationTier.vshost.exe.manifest" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Debug\PresentationTier.csproj.GenerateResource.Cache" />
