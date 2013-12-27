@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BanHangDAO.cs" />
+    <Compile Include="BaoCaoDAO.cs" />
     <Compile Include="HoaDonDAO.cs" />
     <Compile Include="NhapHangDAO.cs" />
     <Compile Include="PhieuNhapDAO.cs" />
