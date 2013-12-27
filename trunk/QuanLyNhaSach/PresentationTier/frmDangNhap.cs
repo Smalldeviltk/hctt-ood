@@ -44,6 +44,7 @@ namespace PresentationTier
                 //new frmMain(this).Show();
                 this.Close();
                 f.CheckAuth();
+                MessageBox.Show("Đăng nhập thành công");
             }
         }
 

@@ -186,7 +186,8 @@
             this.Controls.Add(this.txtServer);
             this.Controls.Add(this.label1);
             this.Name = "frmConnection";
-            this.Text = "frmConnection";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Connect Database";
             this.Load += new System.EventHandler(this.frmConnection_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

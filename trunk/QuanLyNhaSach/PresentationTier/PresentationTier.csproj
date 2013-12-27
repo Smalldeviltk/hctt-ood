@@ -591,21 +591,6 @@
     <EmbeddedResource Include="frmThongKeSach.resx">
       <DependentUpon>frmThongKeSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmBaoCaoBanHang.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmBaoCaoNhapHang.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmConnection.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmMain.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmNhaCungCap.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmNhanVien.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmNhaXuatBan.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmReport.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmSach.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmTacGia.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmTheLoai.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmThongKeSach.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmTimNhanVien.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.frmTimSach.resources" />
-    <EmbeddedResource Include="obj\Debug\PresentationTier.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -675,12 +660,6 @@
       <LastGenOutput>rptTheoTuaDe_Xuat.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="bin\Debug\PresentationTier.vshost.exe.config" />
-    <None Include="bin\Debug\PresentationTier.vshost.exe.manifest" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\PresentationTier.csproj.GenerateResource.Cache" />
-    <None Include="obj\Debug\PresentationTier.csprojResolveAssemblyReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -726,49 +705,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\PresentationTier.vshost.exe" />
-    <Content Include="obj\Debug\PresentationTier.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\TempPE\CR.BCBan1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.BCNhap1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.NCCBan1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.NCCE1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.NCCNhap1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.NVBan1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.NVNhap1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.NXBBan1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.NXBE1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.NXBNhap1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.TGBan1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.TGE1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.TGNhap1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.TLBan1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.TLE1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.TLNhap1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.TonKho1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.TuaBan1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.TuaE1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\CR.TuaMua1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.CrystalReport1.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptBaoCaoBanHang.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptBaoCaoNhapHang.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoNCC_Nhap.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoNCC_Xuat.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoNhanVien_Nhap.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoNhanVien_Xuat.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoNXB_Nhap.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoNXB_Xuat.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoTacGia_Nhap.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoTacGia_Xuat.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoTheLoai_Nhap.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoTheLoai_Xuat.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoTuaDe_Nhap.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoTuaDe_Xuat.cs.dll" />
-    <Content Include="obj\Debug\TempPE\Report.rptTheoTuaDe_Xuat1.cs.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
