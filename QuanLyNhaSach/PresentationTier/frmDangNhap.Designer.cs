@@ -46,6 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,7 +60,7 @@
             this.lblDangNhap.AutoSize = true;
             this.lblDangNhap.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDangNhap.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lblDangNhap.Location = new System.Drawing.Point(12, 9);
+            this.lblDangNhap.Location = new System.Drawing.Point(12, 59);
             this.lblDangNhap.Name = "lblDangNhap";
             this.lblDangNhap.Size = new System.Drawing.Size(193, 31);
             this.lblDangNhap.TabIndex = 0;
@@ -76,7 +77,7 @@
             this.groupBox1.Controls.Add(this.lblMatKhau);
             this.groupBox1.Controls.Add(this.lblTenDangNhap);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 72);
+            this.groupBox1.Location = new System.Drawing.Point(12, 122);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(516, 164);
             this.groupBox1.TabIndex = 1;
@@ -225,7 +226,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label6.Location = new System.Drawing.Point(12, 40);
+            this.label6.Location = new System.Drawing.Point(12, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(187, 19);
             this.label6.TabIndex = 7;
@@ -234,7 +235,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.Location = new System.Drawing.Point(433, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(433, 52);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(75, 64);
             this.pictureBox2.TabIndex = 8;
@@ -250,10 +251,23 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(12, 242);
+            this.panel1.Location = new System.Drawing.Point(12, 292);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(516, 148);
             this.panel1.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label7.Location = new System.Drawing.Point(200, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(147, 31);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Đăng Nhập";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmDangNhap
             // 
@@ -262,7 +276,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(241)))), ((int)(((byte)(204)))));
             this.CancelButton = this.btnHuy;
-            this.ClientSize = new System.Drawing.Size(541, 401);
+            this.ClientSize = new System.Drawing.Size(541, 449);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label6);
@@ -302,5 +317,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label7;
     }
 }

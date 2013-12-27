@@ -54,7 +54,8 @@
             // 
             // tbTenSach
             // 
-            this.tbTenSach.Location = new System.Drawing.Point(162, 34);
+            this.tbTenSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbTenSach.Location = new System.Drawing.Point(350, 34);
             this.tbTenSach.Margin = new System.Windows.Forms.Padding(4);
             this.tbTenSach.Name = "tbTenSach";
             this.tbTenSach.Size = new System.Drawing.Size(132, 22);
@@ -62,8 +63,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 40);
+            this.label1.Location = new System.Drawing.Point(229, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 16);
@@ -72,8 +74,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 78);
+            this.label2.Location = new System.Drawing.Point(229, 78);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 16);
@@ -82,7 +85,8 @@
             // 
             // tbGiaMua
             // 
-            this.tbGiaMua.Location = new System.Drawing.Point(162, 72);
+            this.tbGiaMua.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbGiaMua.Location = new System.Drawing.Point(350, 72);
             this.tbGiaMua.Margin = new System.Windows.Forms.Padding(4);
             this.tbGiaMua.Name = "tbGiaMua";
             this.tbGiaMua.Size = new System.Drawing.Size(132, 22);
@@ -90,8 +94,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 112);
+            this.label3.Location = new System.Drawing.Point(229, 112);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 16);
@@ -100,7 +105,8 @@
             // 
             // tbGiaBan
             // 
-            this.tbGiaBan.Location = new System.Drawing.Point(162, 106);
+            this.tbGiaBan.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbGiaBan.Location = new System.Drawing.Point(350, 106);
             this.tbGiaBan.Margin = new System.Windows.Forms.Padding(4);
             this.tbGiaBan.Name = "tbGiaBan";
             this.tbGiaBan.Size = new System.Drawing.Size(132, 22);
@@ -108,8 +114,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 151);
+            this.label4.Location = new System.Drawing.Point(229, 151);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 16);
@@ -118,9 +125,10 @@
             // 
             // cbbMaNhaCungCap
             // 
+            this.cbbMaNhaCungCap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbMaNhaCungCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMaNhaCungCap.FormattingEnabled = true;
-            this.cbbMaNhaCungCap.Location = new System.Drawing.Point(162, 144);
+            this.cbbMaNhaCungCap.Location = new System.Drawing.Point(350, 144);
             this.cbbMaNhaCungCap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbMaNhaCungCap.Name = "cbbMaNhaCungCap";
             this.cbbMaNhaCungCap.Size = new System.Drawing.Size(130, 24);
@@ -128,8 +136,9 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 241);
+            this.label5.Location = new System.Drawing.Point(229, 241);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 16);
@@ -138,17 +147,23 @@
             // 
             // gridView
             // 
+            this.gridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridView.Location = new System.Drawing.Point(29, 315);
+            this.gridView.Location = new System.Drawing.Point(12, 315);
             this.gridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridView.Name = "gridView";
-            this.gridView.Size = new System.Drawing.Size(567, 247);
+            this.gridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridView.Size = new System.Drawing.Size(987, 247);
             this.gridView.TabIndex = 10;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_CellClick);
             // 
             // btThem
             // 
-            this.btThem.Location = new System.Drawing.Point(124, 276);
+            this.btThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btThem.Location = new System.Drawing.Point(312, 276);
             this.btThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(80, 26);
@@ -159,7 +174,8 @@
             // 
             // btXoa
             // 
-            this.btXoa.Location = new System.Drawing.Point(271, 276);
+            this.btXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btXoa.Location = new System.Drawing.Point(459, 276);
             this.btXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(80, 26);
@@ -170,7 +186,8 @@
             // 
             // btCapNhat
             // 
-            this.btCapNhat.Location = new System.Drawing.Point(418, 276);
+            this.btCapNhat.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btCapNhat.Location = new System.Drawing.Point(606, 276);
             this.btCapNhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btCapNhat.Name = "btCapNhat";
             this.btCapNhat.Size = new System.Drawing.Size(80, 26);
@@ -181,8 +198,9 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(302, 78);
+            this.label6.Location = new System.Drawing.Point(490, 78);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 16);
@@ -191,8 +209,9 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(302, 112);
+            this.label7.Location = new System.Drawing.Point(490, 112);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 16);
@@ -201,8 +220,9 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(343, 40);
+            this.label8.Location = new System.Drawing.Point(531, 40);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 16);
@@ -211,9 +231,10 @@
             // 
             // cbbTheLoai
             // 
+            this.cbbTheLoai.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbTheLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTheLoai.FormattingEnabled = true;
-            this.cbbTheLoai.Location = new System.Drawing.Point(418, 32);
+            this.cbbTheLoai.Location = new System.Drawing.Point(606, 32);
             this.cbbTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbTheLoai.Name = "cbbTheLoai";
             this.cbbTheLoai.Size = new System.Drawing.Size(130, 24);
@@ -221,8 +242,9 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(41, 198);
+            this.label9.Location = new System.Drawing.Point(229, 198);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 16);
@@ -231,9 +253,10 @@
             // 
             // cbbNhaXuatBan
             // 
+            this.cbbNhaXuatBan.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbNhaXuatBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbNhaXuatBan.FormattingEnabled = true;
-            this.cbbNhaXuatBan.Location = new System.Drawing.Point(162, 190);
+            this.cbbNhaXuatBan.Location = new System.Drawing.Point(350, 190);
             this.cbbNhaXuatBan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbbNhaXuatBan.Name = "cbbNhaXuatBan";
             this.cbbNhaXuatBan.Size = new System.Drawing.Size(130, 24);
@@ -241,15 +264,17 @@
             // 
             // clbTacGia
             // 
+            this.clbTacGia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.clbTacGia.FormattingEnabled = true;
-            this.clbTacGia.Location = new System.Drawing.Point(418, 78);
+            this.clbTacGia.Location = new System.Drawing.Point(606, 78);
             this.clbTacGia.Name = "clbTacGia";
             this.clbTacGia.Size = new System.Drawing.Size(157, 174);
             this.clbTacGia.TabIndex = 23;
             // 
             // tbSoLuong
             // 
-            this.tbSoLuong.Location = new System.Drawing.Point(162, 238);
+            this.tbSoLuong.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tbSoLuong.Location = new System.Drawing.Point(350, 238);
             this.tbSoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.tbSoLuong.Name = "tbSoLuong";
             this.tbSoLuong.Size = new System.Drawing.Size(132, 22);
@@ -259,7 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 586);
+            this.ClientSize = new System.Drawing.Size(1011, 586);
             this.Controls.Add(this.tbSoLuong);
             this.Controls.Add(this.clbTacGia);
             this.Controls.Add(this.cbbNhaXuatBan);

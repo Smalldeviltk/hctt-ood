@@ -35,12 +35,14 @@
             this.dtpNNDen = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvThongKe = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).BeginInit();
             this.SuspendLayout();
             // 
             // btXemThongKe
             // 
-            this.btXemThongKe.Location = new System.Drawing.Point(192, 178);
+            this.btXemThongKe.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btXemThongKe.Location = new System.Drawing.Point(266, 145);
             this.btXemThongKe.Name = "btXemThongKe";
             this.btXemThongKe.Size = new System.Drawing.Size(168, 23);
             this.btXemThongKe.TabIndex = 0;
@@ -50,8 +52,9 @@
             // 
             // dtpNNTu
             // 
+            this.dtpNNTu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpNNTu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNNTu.Location = new System.Drawing.Point(303, 41);
+            this.dtpNNTu.Location = new System.Drawing.Point(357, 70);
             this.dtpNNTu.Name = "dtpNNTu";
             this.dtpNNTu.Size = new System.Drawing.Size(91, 20);
             this.dtpNNTu.TabIndex = 1;
@@ -59,8 +62,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(226, 47);
+            this.label1.Location = new System.Drawing.Point(253, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 2;
@@ -68,8 +72,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(226, 118);
+            this.label2.Location = new System.Drawing.Point(243, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 4;
@@ -77,8 +82,9 @@
             // 
             // dtpNNDen
             // 
+            this.dtpNNDen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpNNDen.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNNDen.Location = new System.Drawing.Point(303, 118);
+            this.dtpNNDen.Location = new System.Drawing.Point(357, 108);
             this.dtpNNDen.Name = "dtpNNDen";
             this.dtpNNDen.Size = new System.Drawing.Size(91, 20);
             this.dtpNNDen.TabIndex = 3;
@@ -86,7 +92,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(192, 473);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.Location = new System.Drawing.Point(266, 510);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(168, 23);
             this.button1.TabIndex = 13;
@@ -96,19 +103,34 @@
             // 
             // dgvThongKe
             // 
+            this.dgvThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvThongKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThongKe.Location = new System.Drawing.Point(90, 281);
+            this.dgvThongKe.Location = new System.Drawing.Point(60, 190);
             this.dgvThongKe.Name = "dgvThongKe";
             this.dgvThongKe.ReadOnly = true;
             this.dgvThongKe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvThongKe.Size = new System.Drawing.Size(365, 150);
+            this.dgvThongKe.Size = new System.Drawing.Size(577, 303);
             this.dgvThongKe.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(311, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Báo cáo nhập hàng";
             // 
             // frmBaoCaoNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 545);
+            this.ClientSize = new System.Drawing.Size(702, 545);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvThongKe);
             this.Controls.Add(this.label2);
@@ -135,5 +157,6 @@
         private System.Windows.Forms.DateTimePicker dtpNNDen;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvThongKe;
+        private System.Windows.Forms.Label label3;
     }
 }

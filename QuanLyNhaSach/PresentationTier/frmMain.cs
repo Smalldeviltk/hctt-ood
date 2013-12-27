@@ -25,6 +25,7 @@ namespace PresentationTier
             {
                 HelperBUS h = new HelperBUS();
                 SqlConnection con = h.GetConnect();
+                đăngNhậpToolStripMenuItem_Click(null, null);
             }
             catch (Exception)
             {
@@ -38,7 +39,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmDangNhap f = new frmDangNhap(this);
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -74,6 +75,7 @@ namespace PresentationTier
         {
             Auth.logged = null;
             CheckAuth();
+            panelFrm.Controls.Clear();
         }
 
         private void tácGiảToolStripMenuItem_Click(object sender, EventArgs e)
