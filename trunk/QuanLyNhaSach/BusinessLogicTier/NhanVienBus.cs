@@ -10,7 +10,7 @@ using System.Data;
 
 namespace BusinessLogicTier
 {
-    public class NhanVienBus
+    public class NhanVienBUS
     {
         NhanVienDAO nvD = new NhanVienDAO();
         NhanVien nv = new NhanVien();
@@ -45,6 +45,11 @@ namespace BusinessLogicTier
         public DataTable TimTheoNgaySinh(string ngaysinh)
         {
             return nvD.TimTheoNgaySinh(ngaysinh);
+        }
+
+        public DataTable login(string username, string password)
+        {
+            return nvD.login(username, password);
         }
     }
 }

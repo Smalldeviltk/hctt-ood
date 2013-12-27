@@ -14,7 +14,7 @@ namespace PresentationTier
     public partial class frmNhanVien : Form
     {
         TaoMa ma = new TaoMa();
-        NhanVienBus bus = new NhanVienBus();
+        NhanVienBUS bus = new NhanVienBUS();
         NhanVien data = new NhanVien();
 
         public frmNhanVien()

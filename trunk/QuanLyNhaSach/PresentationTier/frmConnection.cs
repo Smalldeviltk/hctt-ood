@@ -121,6 +121,31 @@ namespace PresentationTier
         {
             btnOK.Enabled = true;
         }
+
+        private void cmbAuthentication_Leave(object sender, EventArgs e)
+        {
+            txtUsername.Focus();
+        }
+
+        private void txtUsername_Leave(object sender, EventArgs e)
+        {
+            txtPassword.Focus();
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            btnTestConnection.Focus();
+        }
+
+        private void btnTestConnection_Leave(object sender, EventArgs e)
+        {
+            cmbDatabase.Focus();
+        }
+
+        private void cmbDatabase_Leave(object sender, EventArgs e)
+        {
+            btnOK.Focus();
+        }
   
     }
 }

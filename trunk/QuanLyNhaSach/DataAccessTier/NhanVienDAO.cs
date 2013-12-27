@@ -153,5 +153,15 @@ namespace DataAccessTier
             cnn.Close();
             return dttable;
         }
+
+        public DataTable login(string username, string password)
+        {
+            SqlConnection cn = helper.GetConnect();
+            string sql = "SELECT * FROM NHANVIEN WHERE Username='" + username + "' AND Password='" + password + "'";
+            SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }

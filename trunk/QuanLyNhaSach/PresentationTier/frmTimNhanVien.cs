@@ -14,7 +14,7 @@ namespace PresentationTier
 {
     public partial class frmTimNhanVien : Form
     {
-        NhanVienBus bus = new NhanVienBus();
+        NhanVienBUS bus = new NhanVienBUS();
         public frmTimNhanVien()
         {
             InitializeComponent();
