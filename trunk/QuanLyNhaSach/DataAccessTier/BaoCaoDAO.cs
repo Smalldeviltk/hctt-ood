@@ -65,7 +65,7 @@ namespace DataAccessTier
         public DataTable TheoTacGia_Nhap(DateTime tu, DateTime den)
         {
 
-            sqlString = "select tg.ten as [Tên tác giả],s.ten as [Tên sách],s.Giamua as [Giá mua],hd.ngay as [Ngày mua], sum(ct.soluong) as [Số lượng] 	from hoadon hd	inner join CHITIEThoadon ct on hd.id = ct.Mahoadon	inner join sach s on s.id = ct.masach	inner join SACHTACGIA stg on s.id = stg.MaSach	inner join tacgia tg on tg.id = stg.matacgia	where hd.ngay between '" + tu.ToString("s").Substring(0, 10) + "' and '" + den.ToString("s").Substring(0, 10) + "'	group by tg.ten,s.ten,s.Giamua,hd.ngay";
+            sqlString = "select tg.ten as [Tên tác giả],s.ten as [Tên sách],s.Giamua as [Giá mua],pn.ngay as [Ngày mua], sum(ct.soluong) as [Số lượng] 	from phieunhap pn	inner join CHITIETphieunhap ct on pn.id = ct.Maphieunhap	inner join sach s on s.id = ct.masach	inner join SACHTACGIA stg on s.id = stg.MaSach	inner join tacgia tg on tg.id = stg.matacgia	where pn.ngay between '" + tu.ToString("s").Substring(0, 10) + "' and '" + den.ToString("s").Substring(0, 10) + "'	group by tg.ten,s.ten,s.Giamua,pn.ngay";
             //---------------------------
             dttable = new DataTable();
             cnn = helper.GetConnect();
@@ -141,7 +141,7 @@ namespace DataAccessTier
         public DataTable TheoNhanVien_Xuat(DateTime tu, DateTime den)
         {
 
-            sqlString = "select nv.ten as [Tên nhân viên],hd.id as [Mã hóa đơn],hd.ngay as [Ngày mua], sum(hd.TongTien) as [Tổng tiền bán] from hoadon hd	inner join CHITIEThoadon ct on hd.id = ct.Mahoadon	inner join nhanvien nv on nv.id = hd.MaNhanVien	where hd.ngay between '" + tu.ToString("s").Substring(0, 10) + "' and '" + den.ToString("s").Substring(0, 10) + "'	group by nv.ten,hd.id,hd.ngay";
+            sqlString = "select nv.ten as [Tên nhân viên],hd.id as [Mã hóa đơn],hd.ngay as [Ngày mua], hd.TongTien as [Tổng tiền bán] from hoadon hd	inner join nhanvien nv on nv.id = hd.MaNhanVien	where hd.ngay between '" + tu.ToString("s").Substring(0, 10) + "' and '" + den.ToString("s").Substring(0, 10) + "'";
             //---------------------------
             dttable = new DataTable();
             cnn = helper.GetConnect();
@@ -154,7 +154,7 @@ namespace DataAccessTier
         public DataTable TheoNhanVien_Nhap(DateTime tu, DateTime den)
         {
 
-            sqlString = "select nv.ten as [Tên nhân viên],pn.id as [Mã phiếu nhập],pn.ngay as [Ngày nhập], sum(pn.TongTien) as [Tổng tiền nhập] from phieunhap pn	inner join CHITIETPHIEUNHAP ct on pn.id = ct.MaPhieuNhap	inner join nhanvien nv on nv.id = pn.MaNhanVien	where pn.ngay between '" + tu.ToString("s").Substring(0, 10) + "' and '" + den.ToString("s").Substring(0, 10) + "'	group by nv.ten,pn.id,pn.ngay";
+            sqlString = "select nv.ten as [Tên nhân viên],pn.id as [Mã phiếu nhập],pn.ngay as [Ngày nhập], pn.TongTien as [Tổng tiền nhập] from phieunhap pn inner join nhanvien nv on nv.id = pn.MaNhanVien	where pn.ngay between '" + tu.ToString("s").Substring(0, 10) + "' and '" + den.ToString("s").Substring(0, 10) + "'";
             //---------------------------
             dttable = new DataTable();
             cnn = helper.GetConnect();
