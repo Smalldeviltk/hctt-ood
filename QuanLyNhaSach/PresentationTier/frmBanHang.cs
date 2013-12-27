@@ -135,40 +135,47 @@ namespace PresentationTier
             }
             else
             {
-                //PhieuNhap hd = new PhieuNhap();
-                data.MaNhanVien = "NV006";
-                data.TongTien = tongtien.ToString();
-                data.Ngay = DateTime.Now.ToString();
-
-                int maHoaDon = BanHangBUS.insertHoaDon(data);
-
-                for (int i = 0; i < (dataGridView2.RowCount - 1); i++)
+                try
                 {
-                    ChiTietHoaDon cthd = new ChiTietHoaDon();
-                    string mamaxct = BanHangBUS.layMaMaxCT();
-                    if (mamaxct.Equals(""))
-                    {
-                        cthd.Id = "CTHD000001";
-                    }
-                    else
-                    {
-                        cthd.Id = ma.TaoMaTuDong(mamaxct, 4);
-                    }
-                    cthd.MaHoaDon = data.Id;
-                    //string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
-                    cthd.MaSach = dataGridView2.Rows[i].Cells[0].Value.ToString();
-                    cthd.SoLuong = dataGridView2.Rows[i].Cells[4].Value.ToString();
-                    BanHangBUS.insertChiTietHoaDon(cthd);
-                    BanHangBUS.updateSoLuongSach(cthd.MaSach, cthd.SoLuong);
-                }
+                    //PhieuNhap hd = new PhieuNhap();
+                    data.MaNhanVien = "NV006";
+                    data.TongTien = tongtien.ToString();
+                    data.Ngay = DateTime.Now.ToString();
 
-                MessageBox.Show("Lưu thành công");
-                XuatPhieuNhap();
-                btnNhapMoi_Click(sender, e);
+                    int maHoaDon = BanHangBUS.insertHoaDon(data);
+
+                    for (int i = 0; i < (dataGridView2.RowCount - 1); i++)
+                    {
+                        ChiTietHoaDon cthd = new ChiTietHoaDon();
+                        string mamaxct = BanHangBUS.layMaMaxCT();
+                        if (mamaxct.Equals(""))
+                        {
+                            cthd.Id = "CTHD000001";
+                        }
+                        else
+                        {
+                            cthd.Id = ma.TaoMaTuDong(mamaxct, 4);
+                        }
+                        cthd.MaHoaDon = data.Id;
+                        //string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
+                        cthd.MaSach = dataGridView2.Rows[i].Cells[0].Value.ToString();
+                        cthd.SoLuong = dataGridView2.Rows[i].Cells[4].Value.ToString();
+                        BanHangBUS.insertChiTietHoaDon(cthd);
+                        BanHangBUS.updateSoLuongSach(cthd.MaSach, cthd.SoLuong);
+                    }
+
+                    MessageBox.Show("Lưu thành công");
+                    XuatHoaDon();
+                    btnNhapMoi_Click(sender, e);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi");
+                }
             }
         }
 
-        public void XuatPhieuNhap()
+        public void XuatHoaDon()
         {
             frmReportViewer frm = new frmReportViewer();
             DataTable dt = new DataTable();
@@ -188,7 +195,7 @@ namespace PresentationTier
                     dtRow[i1] = (gridRow.Cells[i1].Value == null ? DBNull.Value : gridRow.Cells[i1].Value);
                 dt.Rows.Add(dtRow);
             }
-            frm.viewPhieuNhap(dt);
+            frm.viewHoaDon(dt);
         }
 
         private void btnNhapMoi_Click(object sender, EventArgs e)
@@ -243,7 +250,7 @@ namespace PresentationTier
         private void frmBanHang_Load(object sender, EventArgs e)
         {
             lbNgay.Text = DateTime.Now.ToString();
-            //lbNhanVien.Text = Auth.logged.Ten;
+            lbNhanVien.Text = Auth.logged.Ten;
             txtTongTien.Text = "0 vnd";
 
             load();

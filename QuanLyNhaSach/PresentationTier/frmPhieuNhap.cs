@@ -117,36 +117,43 @@ namespace PresentationTier
             }
             else
             {
-                //PhieuNhap hd = new PhieuNhap();
-                data.MaNhanVien = "NV006";
-                data.TongTien = tongtien.ToString();
-                data.Ngay = DateTime.Now.ToString();
-
-                int maHoaDon = NhapHangBUS.insertPhieuNhap(data);
-
-                for (int i = 0; i < (dataGridView2.RowCount - 1); i++)
+                try
                 {
-                    ChiTietPhieuNhap cthd = new ChiTietPhieuNhap();
-                    string mamaxct = NhapHangBUS.layMaMaxCT();
-                    if (mamaxct.Equals(""))
-                    {
-                        cthd.Id = "CTPN000001";
-                    }
-                    else
-                    {
-                        cthd.Id = ma.TaoMaTuDong(mamaxct, 4);
-                    }
-                    cthd.MaPhieuNhap = data.Id;
-                    //string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
-                    cthd.MaSach = dataGridView2.Rows[i].Cells[0].Value.ToString();
-                    cthd.SoLuong = dataGridView2.Rows[i].Cells[4].Value.ToString();
-                    NhapHangBUS.insertChiTietPhieuNhap(cthd);
-                    NhapHangBUS.updateSoLuongSach(cthd.MaSach, cthd.SoLuong);
-                }
+                    //PhieuNhap hd = new PhieuNhap();
+                    data.MaNhanVien = "NV006";
+                    data.TongTien = tongtien.ToString();
+                    data.Ngay = DateTime.Now.ToString();
 
-                MessageBox.Show("Lưu thành công");
-                XuatPhieuNhap();
-                btnNhapMoi_Click(sender, e);
+                    int maHoaDon = NhapHangBUS.insertPhieuNhap(data);
+
+                    for (int i = 0; i < (dataGridView2.RowCount - 1); i++)
+                    {
+                        ChiTietPhieuNhap cthd = new ChiTietPhieuNhap();
+                        string mamaxct = NhapHangBUS.layMaMaxCT();
+                        if (mamaxct.Equals(""))
+                        {
+                            cthd.Id = "CTPN000001";
+                        }
+                        else
+                        {
+                            cthd.Id = ma.TaoMaTuDong(mamaxct, 4);
+                        }
+                        cthd.MaPhieuNhap = data.Id;
+                        //string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
+                        cthd.MaSach = dataGridView2.Rows[i].Cells[0].Value.ToString();
+                        cthd.SoLuong = dataGridView2.Rows[i].Cells[4].Value.ToString();
+                        NhapHangBUS.insertChiTietPhieuNhap(cthd);
+                        NhapHangBUS.updateSoLuongSach(cthd.MaSach, cthd.SoLuong);
+                    }
+
+                    MessageBox.Show("Lưu thành công");
+                    XuatPhieuNhap();
+                    btnNhapMoi_Click(sender, e);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Lỗi");
+                }
             }
         }
 
@@ -225,7 +232,7 @@ namespace PresentationTier
         private void frmPhieuNhap_Load(object sender, EventArgs e)
         {
             lbNgay.Text = DateTime.Now.ToString();
-            //lbNhanVien.Text = Auth.logged.Ten;
+            lbNhanVien.Text = Auth.logged.Ten;
             txtTongTien.Text = "0 vnd";
 
             load();
