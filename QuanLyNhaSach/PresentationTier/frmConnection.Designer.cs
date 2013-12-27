@@ -65,6 +65,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(170, 20);
             this.txtUsername.TabIndex = 3;
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // label2
             // 
@@ -79,8 +80,10 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(121, 135);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(170, 20);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // label3
             // 
@@ -111,6 +114,7 @@
             this.cmbAuthentication.Size = new System.Drawing.Size(170, 21);
             this.cmbAuthentication.TabIndex = 7;
             this.cmbAuthentication.SelectedIndexChanged += new System.EventHandler(this.cmbAuthentication_SelectedIndexChanged);
+            this.cmbAuthentication.Leave += new System.EventHandler(this.cmbAuthentication_Leave);
             // 
             // btnTestConnection
             // 
@@ -121,6 +125,7 @@
             this.btnTestConnection.Text = "TestConection";
             this.btnTestConnection.UseVisualStyleBackColor = true;
             this.btnTestConnection.Click += new System.EventHandler(this.btnTestConnection_Click);
+            this.btnTestConnection.Leave += new System.EventHandler(this.btnTestConnection_Leave);
             // 
             // label5
             // 
@@ -138,6 +143,7 @@
             this.cmbDatabase.Name = "cmbDatabase";
             this.cmbDatabase.Size = new System.Drawing.Size(170, 21);
             this.cmbDatabase.TabIndex = 10;
+            this.cmbDatabase.Leave += new System.EventHandler(this.cmbDatabase_Leave);
             // 
             // btnOK
             // 
@@ -151,6 +157,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Location = new System.Drawing.Point(184, 264);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(95, 27);
@@ -163,6 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(362, 303);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);

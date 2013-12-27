@@ -16,6 +16,7 @@ namespace PresentationTier
         public frmMain()
         {
             InitializeComponent();
+            CheckAuth();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -31,87 +32,198 @@ namespace PresentationTier
                 f.ShowDialog();
             }
         }
-
-        private void btTacGia_Click(object sender, EventArgs e)
+      
+        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panelFrm.Controls.Clear();
+            frmDangNhap f = new frmDangNhap(this);
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
+        }
+
+        public void CheckAuth()
+        {
+            if (Auth.logged != null)
+            {
+                dangNhapToolStripMenuItem.Enabled = false;
+                dangXuatToolStripMenuItem.Enabled = true;
+                thongTinTaiKhoanToolStripMenuItem.Enabled = true;
+                quanLyToolStripMenuItem.Enabled = true;
+                timKiemNhanVienToolStripMenuItem.Enabled = true;
+                thayDoiQuiDinhToolStripMenuItem.Enabled = true;
+                kinhDoanhToolStripMenuItem.Enabled = true;
+                baoCaoToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                dangNhapToolStripMenuItem.Enabled = true;
+                dangXuatToolStripMenuItem.Enabled = false;
+                thongTinTaiKhoanToolStripMenuItem.Enabled = false;
+                quanLyToolStripMenuItem.Enabled = false;
+                timKiemNhanVienToolStripMenuItem.Enabled = false;
+                thayDoiQuiDinhToolStripMenuItem.Enabled = false;
+                kinhDoanhToolStripMenuItem.Enabled = false;
+                baoCaoToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Auth.logged = null;
+            CheckAuth();
+        }
+
+        private void tácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelFrm.Controls.Clear();
             frmTacGia f = new frmTacGia();
-            f.ShowDialog();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
         }
 
-        private void btNhanVien_Click(object sender, EventArgs e)
+        private void nhàXuấtBảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmNhanVien f = new frmNhanVien();
-            f.ShowDialog();
-        }
-
-        private void btNhaCungCap_Click(object sender, EventArgs e)
-        {
-            frmNhaCungCap f = new frmNhaCungCap();
-            f.ShowDialog();
-        }
-
-        private void btNhaXuatBan_Click(object sender, EventArgs e)
-        {
+            panelFrm.Controls.Clear();
             frmNhaXuatBan f = new frmNhaXuatBan();
-            f.ShowDialog();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
         }
 
-        private void btTheLoai_Click(object sender, EventArgs e)
+        private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panelFrm.Controls.Clear();
+            frmNhaCungCap f = new frmNhaCungCap();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
+        }
+
+        private void thểLoạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelFrm.Controls.Clear();
             frmTheLoai f = new frmTheLoai();
-            f.ShowDialog();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
         }
 
-        private void btSach_Click(object sender, EventArgs e)
+        private void sáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panelFrm.Controls.Clear();
             frmSach f = new frmSach();
-            f.ShowDialog();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBaoCaoNhapHang f = new frmBaoCaoNhapHang();
-            f.ShowDialog();
+            panelFrm.Controls.Clear();
+            frmNhanVien f = new frmNhanVien();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void bánHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmBaoCaoBanHang f = new frmBaoCaoBanHang();
-            f.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            frmThongKeSach f = new frmThongKeSach();
-            f.ShowDialog();
-        }
-
-        private void btnBanHang_Click(object sender, EventArgs e)
-        {
+            panelFrm.Controls.Clear();
             frmBanHang f = new frmBanHang();
-            f.ShowDialog();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
         }
 
-        private void btnNhapHang_Click(object sender, EventArgs e)
+        private void nhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panelFrm.Controls.Clear();
             frmPhieuNhap f = new frmPhieuNhap();
-            f.ShowDialog();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
         }
 
-        private void btTimSach_Click(object sender, EventArgs e)
+        private void thốngKêSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmTimSach f= new frmTimSach();
-            f.ShowDialog();
+            panelFrm.Controls.Clear();
+            frmThongKeSach f = new frmThongKeSach();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
         }
 
-        private void btTimNV_Click(object sender, EventArgs e)
+        private void baoCaoNhapToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panelFrm.Controls.Clear();
+            frmBaoCaoNhapHang f = new frmBaoCaoNhapHang();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
+        }
+
+        private void baoCaoBanHangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelFrm.Controls.Clear();
+            frmBaoCaoBanHang f = new frmBaoCaoBanHang();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
+        }
+
+        private void tìmKiếmSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelFrm.Controls.Clear();
+            frmTimSach f = new frmTimSach();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
+        }
+
+        private void timKiemNhanVienToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panelFrm.Controls.Clear();
             frmTimNhanVien f = new frmTimNhanVien();
-            f.ShowDialog();
+            f.TopLevel = false;
+            //f.FormBorderStyle = FormBorderStyle.None;
+            f.Dock = DockStyle.Fill;
+            panelFrm.Controls.Add(f);
+            f.Show();
         }
 
+        private void thayDoiQuiDinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
-     
+        }
+
 
 
     }

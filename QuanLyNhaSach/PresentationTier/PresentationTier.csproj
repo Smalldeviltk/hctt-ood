@@ -264,6 +264,12 @@
     <Compile Include="frmBanHang.Designer.cs">
       <DependentUpon>frmBanHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -537,6 +543,9 @@
     <EmbeddedResource Include="frmBanHang.resx">
       <DependentUpon>frmBanHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPhieuNhap.resx">
       <DependentUpon>frmPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -666,7 +675,6 @@
       <LastGenOutput>rptTheoTuaDe_Xuat.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="bin\Debug\ConnectString.con" />
     <None Include="bin\Debug\PresentationTier.vshost.exe.config" />
     <None Include="bin\Debug\PresentationTier.vshost.exe.manifest" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
