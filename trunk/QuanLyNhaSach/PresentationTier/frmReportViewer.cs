@@ -28,27 +28,36 @@ namespace QuanLiNhaSachGUI
 
         public void viewHoaDon(DataTable dt)
         {
-            //CrystalReportHoaDon objRpt = new CrystalReportHoaDon();
-            //objRpt.SetDataSource(dt);
+            CrystalReportHoaDon objRpt = new CrystalReportHoaDon();
+            objRpt.SetDataSource(dt);
+            
             //objRpt.SetParameterValue("TenNhaSach", QuiDinhBUS.LayGiaTri("TenNhaSach"));
             //objRpt.SetParameterValue("DiaChi", QuiDinhBUS.LayGiaTri("DiaChi"));
             //objRpt.SetParameterValue("Email", QuiDinhBUS.LayGiaTri("Email"));
             //objRpt.SetParameterValue("DienThoai", QuiDinhBUS.LayGiaTri("DienThoai"));
             //objRpt.SetParameterValue("Website", QuiDinhBUS.LayGiaTri("Website"));
-            //crystalReportViewer1.ReportSource = objRpt;
-            //crystalReportViewer1.Refresh();
-            //this.Show();
+
+            objRpt.SetParameterValue("TenNhaSach", "Nhà sách UIT");
+            objRpt.SetParameterValue("DiaChi", "Làng đại học");
+            objRpt.SetParameterValue("Email", "N/A");
+            objRpt.SetParameterValue("DienThoai", "N/A");
+            objRpt.SetParameterValue("Website", "N/A");
+            crystalReportViewer1.ReportSource = objRpt;
+            crystalReportViewer1.Refresh();
+            this.Show();
         }
 
-        internal void viewPhieuNhap(DataTable dt)
+        public void viewPhieuNhap(DataTable dt)
         {
-            //CrystalReportPhieuNhap objRpt = new CrystalReportPhieuNhap();
-            //objRpt.SetDataSource(dt);
-            //crystalReportViewer1.ReportSource = objRpt;
-            //crystalReportViewer1.Refresh();
-            //this.Show();            
+            CrystalReportPhieuNhap objRpt = new CrystalReportPhieuNhap();
+            objRpt.SetDataSource(dt);
+            //objRpt.SetParameterValue("Nhân Viên", "N/A");
+            objRpt.SetParameterValue("DienThoai", Auth.logged.Ten);
+            crystalReportViewer1.ReportSource = objRpt;
+            crystalReportViewer1.Refresh();
+            this.Show();
         }
-		public void viewTuaBan(DataTable dt)
+        public void viewTuaBan(DataTable dt)
         {
             CR.TuaBan objRpt = new CR.TuaBan();
             objRpt.SetDataSource(dt);
