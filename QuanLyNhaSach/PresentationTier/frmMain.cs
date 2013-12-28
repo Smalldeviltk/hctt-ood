@@ -83,7 +83,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmTacGia f = new frmTacGia();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -94,7 +94,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmNhaXuatBan f = new frmNhaXuatBan();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -105,7 +105,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmNhaCungCap f = new frmNhaCungCap();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -116,7 +116,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmTheLoai f = new frmTheLoai();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -127,7 +127,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmSach f = new frmSach();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -138,7 +138,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmNhanVien f = new frmNhanVien();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -149,7 +149,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmBanHang f = new frmBanHang();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -160,7 +160,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmPhieuNhap f = new frmPhieuNhap();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -171,7 +171,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmThongKeSach f = new frmThongKeSach();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -182,7 +182,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmBaoCaoNhapHang f = new frmBaoCaoNhapHang();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -193,7 +193,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmBaoCaoBanHang f = new frmBaoCaoBanHang();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -204,7 +204,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmTimSach f = new frmTimSach();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
@@ -215,7 +215,7 @@ namespace PresentationTier
             panelFrm.Controls.Clear();
             frmTimNhanVien f = new frmTimNhanVien();
             f.TopLevel = false;
-            //f.FormBorderStyle = FormBorderStyle.None;
+            f.FormBorderStyle = FormBorderStyle.None;
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
