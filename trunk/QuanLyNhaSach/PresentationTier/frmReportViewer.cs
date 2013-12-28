@@ -37,8 +37,8 @@ namespace QuanLiNhaSachGUI
             //objRpt.SetParameterValue("DienThoai", QuiDinhBUS.LayGiaTri("DienThoai"));
             //objRpt.SetParameterValue("Website", QuiDinhBUS.LayGiaTri("Website"));
 
-            objRpt.SetParameterValue("TenNhaSach", "Nhà sách UIT");
-            objRpt.SetParameterValue("DiaChi", "Làng đại học");
+            objRpt.SetParameterValue("TenNhaSach", "BookStoreM1.0");
+            objRpt.SetParameterValue("DiaChi", "Đại chỉ: UIT");
             objRpt.SetParameterValue("Email", "N/A");
             objRpt.SetParameterValue("DienThoai", "N/A");
             objRpt.SetParameterValue("Website", "N/A");

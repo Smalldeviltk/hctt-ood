@@ -165,7 +165,7 @@ namespace PresentationTier
             {
                 dt.Columns.Add(col.DataPropertyName, col.ValueType);
             }
-            Int32 t = new Int32();
+            ulong t = new ulong();
             dt.Columns[5].DataType = t.GetType();
             dt.Columns[3].DataType = t.GetType();
             foreach (DataGridViewRow gridRow in dataGridView2.Rows)
