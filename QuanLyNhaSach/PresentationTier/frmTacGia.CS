@@ -67,13 +67,7 @@ namespace PresentationTier
 
         private void gridView_SelectionChanged(object sender, EventArgs e)
         {
-            tbTen.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[1].Value.ToString();
-            tbDiaChi.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[2].Value.ToString();
-            tbDienThoai.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[3].Value.ToString();
-            tbEmail.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[4].Value.ToString();
-            tbGhiChu.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[5].Value.ToString();
-            btXoa.Enabled = true;
-            btCapNhat.Enabled = true;
+
         }
 
         private void btXoa_Click(object sender, EventArgs e)
@@ -102,6 +96,17 @@ namespace PresentationTier
             bus.Update(data);
             loadData();
             MessageBox.Show("Cập nhật thành công");
+        }
+
+        private void gridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tbTen.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[1].Value.ToString();
+            tbDiaChi.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[2].Value.ToString();
+            tbDienThoai.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[3].Value.ToString();
+            tbEmail.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[4].Value.ToString();
+            tbGhiChu.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[5].Value.ToString();
+            btXoa.Enabled = true;
+            btCapNhat.Enabled = true;
         }
 
 

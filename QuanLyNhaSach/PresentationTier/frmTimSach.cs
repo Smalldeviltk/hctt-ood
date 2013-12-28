@@ -138,6 +138,11 @@ namespace PresentationTier
             }
         }
 
+        private void gridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
 
     }
 }

@@ -186,6 +186,7 @@
             this.gridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridView.Size = new System.Drawing.Size(879, 175);
             this.gridView.TabIndex = 13;
+            this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_CellClick);
             this.gridView.SelectionChanged += new System.EventHandler(this.gridView_SelectionChanged);
             // 
             // label6

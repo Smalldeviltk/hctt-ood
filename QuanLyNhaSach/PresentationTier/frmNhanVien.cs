@@ -185,6 +185,12 @@ namespace PresentationTier
 
         private void gridView_SelectionChanged(object sender, EventArgs e)
         {
+
+
+        }
+
+        private void gridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             tbTen.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[1].Value.ToString();
             string ngaysinh = gridView.Rows[gridView.CurrentRow.Index].Cells[2].Value.ToString();
             if (!ngaysinh.Equals(""))
@@ -204,7 +210,6 @@ namespace PresentationTier
             cbbLoai.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[10].Value.ToString();
             btXoa.Enabled = true;
             btCapNhat.Enabled = true;
-
         }
 
 
