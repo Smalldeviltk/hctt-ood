@@ -83,7 +83,12 @@ namespace PresentationTier
 
         private void gridView_SelectionChanged(object sender, EventArgs e)
         {
-            tbTen.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[1].Value.ToString();           
+
+        }
+
+        private void gridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tbTen.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[1].Value.ToString();
             btXoa.Enabled = true;
             btCapNhat.Enabled = true;
         }

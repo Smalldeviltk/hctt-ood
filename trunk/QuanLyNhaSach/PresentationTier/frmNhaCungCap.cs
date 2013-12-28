@@ -96,6 +96,11 @@ namespace PresentationTier
 
         private void gridView_SelectionChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void gridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             tbTen.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[1].Value.ToString();
             tbDiaChi.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[2].Value.ToString();
             tbDienThoai.Text = gridView.Rows[gridView.CurrentRow.Index].Cells[3].Value.ToString();

@@ -102,6 +102,7 @@
             this.gridView.Name = "gridView";
             this.gridView.Size = new System.Drawing.Size(440, 171);
             this.gridView.TabIndex = 17;
+            this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_CellClick);
             this.gridView.SelectionChanged += new System.EventHandler(this.gridView_SelectionChanged);
             // 
             // label2
