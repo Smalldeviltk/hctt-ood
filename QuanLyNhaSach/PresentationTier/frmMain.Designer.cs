@@ -277,9 +277,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelFrm.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelFrm.Location = new System.Drawing.Point(196, 34);
+            this.panelFrm.Location = new System.Drawing.Point(12, 34);
             this.panelFrm.Name = "panelFrm";
-            this.panelFrm.Size = new System.Drawing.Size(734, 557);
+            this.panelFrm.Size = new System.Drawing.Size(918, 557);
             this.panelFrm.TabIndex = 15;
             // 
             // frmMain

@@ -75,7 +75,7 @@ namespace PresentationTier
                         {
                             if (dr[0].ToString() == myRow[0].ToString())
                             {
-                                int temp = int.Parse(myRow[4].ToString()) + int.Parse(dr[4].ToString());
+                                ulong temp = ulong.Parse(myRow[4].ToString()) + ulong.Parse(dr[4].ToString());
                                 myRow[4] = temp;
                                 myRow[5] = (ulong.Parse(myRow[3].ToString()) * ulong.Parse(myRow[4].ToString())).ToString();
                                 flag = false;
@@ -183,7 +183,7 @@ namespace PresentationTier
             {
                 dt.Columns.Add(col.DataPropertyName, col.ValueType);
             }
-            Int32 t = new Int32();
+            ulong t = new ulong();
             dt.Columns[5].DataType = t.GetType();
             dt.Columns[3].DataType = t.GetType();
             foreach (DataGridViewRow gridRow in dataGridView2.Rows)
