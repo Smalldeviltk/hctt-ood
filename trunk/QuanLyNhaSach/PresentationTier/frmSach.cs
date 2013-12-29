@@ -75,7 +75,7 @@ namespace PresentationTier
         }
 
         private void btThem_Click(object sender, EventArgs e)
-        {            
+        {
             string mamax = bus.LayMaMax();
             if (mamax.Equals(""))
             {
@@ -84,7 +84,7 @@ namespace PresentationTier
             else
             {
                 data.Id = ma.TaoMaTuDong(mamax, 1);
-            }            
+            }
 
             #region kiểm tra dữ liệu nhập
             if (tbTenSach.Text.Equals(""))
@@ -146,37 +146,38 @@ namespace PresentationTier
             data.NhaXuatBan = nxbbus.LayMaTheoTen(cbbNhaXuatBan.SelectedItem.ToString());
             data.NhaCungCap = nccbus.LayMaTheoTen(cbbMaNhaCungCap.SelectedItem.ToString());
             data.TheLoai = tlbus.LayMaTheoTen(cbbTheLoai.SelectedItem.ToString());
-            bus.Insert(data);
+
             int count = 0;
             for (int i = 0; i < clbTacGia.Items.Count; i++)
             {
                 if (clbTacGia.GetItemChecked(i))
                     count++;
             }
-            if (count > 0)
-            {
-                for (int i = 0; i < count; i++)
-                {
-                    string mamaxstg = stgbus.LayMaMax();
-                    if (mamaxstg.Equals(""))
-                    {
-                        stgdata.Id = "STG000001";
-                    }
-                    else
-                    {
-                        stgdata.Id = ma.TaoMaTuDong(mamaxstg, 3);
-                    }
-                    stgdata.MaSach = data.Id;
-          
-                    stgdata.MaTacGia = tgbus.LayMaTheoTen(clbTacGia.CheckedItems[i].ToString());
-                    stgbus.Insert(stgdata);
-                }
-            }
-            else
+            if (count <= 0)
             {
                 MessageBox.Show("Bạn phải chọn tác giả!");
                 return;
             }
+
+            bus.Insert(data);
+            for (int i = 0; i < count; i++)
+            {
+                string mamaxstg = stgbus.LayMaMax();
+                if (mamaxstg.Equals(""))
+                {
+                    stgdata.Id = "STG000001";
+                }
+                else
+                {
+                    stgdata.Id = ma.TaoMaTuDong(mamaxstg, 3);
+                }
+                stgdata.MaSach = data.Id;
+
+                stgdata.MaTacGia = tgbus.LayMaTheoTen(clbTacGia.CheckedItems[i].ToString());
+                stgbus.Insert(stgdata);
+            }
+
+
             MessageBox.Show("Thêm thành công!");
             loadData();
         }
@@ -216,13 +217,13 @@ namespace PresentationTier
         {
             string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
             stgbus.Delete(id);
-            bus.Delete(id);            
+            bus.Delete(id);
             MessageBox.Show("Xóa thành công");
             loadData();
         }
 
         private void btCapNhat_Click(object sender, EventArgs e)
-        {         
+        {
             data.Id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
             #region kiểm tra dữ liệu nhập
             if (tbTenSach.Text.Equals(""))
@@ -284,13 +285,13 @@ namespace PresentationTier
             data.NhaXuatBan = nxbbus.LayMaTheoTen(cbbNhaXuatBan.SelectedItem.ToString());
             data.NhaCungCap = nccbus.LayMaTheoTen(cbbMaNhaCungCap.SelectedItem.ToString());
             data.TheLoai = tlbus.LayMaTheoTen(cbbTheLoai.SelectedItem.ToString());
-            
-            
+
+
             bus.Update(data);
 
 
             stgbus.Delete(data.Id);
-            
+
             string mastg = stgbus.LayMaTheoMaSach(data.Id);
             int count = 0;
             for (int i = 0; i < clbTacGia.Items.Count; i++)
@@ -314,7 +315,7 @@ namespace PresentationTier
                     stgdata.MaSach = data.Id;
                     stgdata.MaTacGia = tgbus.LayMaTheoTen(clbTacGia.CheckedItems[i].ToString());
                     stgbus.Insert(stgdata);
-                    
+
                 }
             }
             else
