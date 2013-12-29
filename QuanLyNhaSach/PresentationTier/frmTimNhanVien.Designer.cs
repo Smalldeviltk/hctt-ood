@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gridView = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
+            this.btTimMoi = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             // 
             this.panel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel.Controls.Add(this.btTimMoi);
             this.panel.Controls.Add(this.label5);
             this.panel.Controls.Add(this.label4);
             this.panel.Controls.Add(this.tbNam);
@@ -62,7 +64,7 @@
             this.panel.Location = new System.Drawing.Point(178, 58);
             this.panel.Margin = new System.Windows.Forms.Padding(4);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(453, 156);
+            this.panel.Size = new System.Drawing.Size(453, 194);
             this.panel.TabIndex = 0;
             // 
             // label5
@@ -206,9 +208,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridView.Location = new System.Drawing.Point(12, 221);
+            this.gridView.Location = new System.Drawing.Point(12, 270);
             this.gridView.Name = "gridView";
-            this.gridView.Size = new System.Drawing.Size(768, 213);
+            this.gridView.Size = new System.Drawing.Size(768, 164);
             this.gridView.TabIndex = 1;
             // 
             // label7
@@ -219,10 +221,20 @@
             this.label7.ForeColor = System.Drawing.Color.DarkGreen;
             this.label7.Location = new System.Drawing.Point(265, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(247, 31);
+            this.label7.Size = new System.Drawing.Size(245, 31);
             this.label7.TabIndex = 29;
             this.label7.Text = "Tìm kiếm Nhân viên";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btTimMoi
+            // 
+            this.btTimMoi.Location = new System.Drawing.Point(187, 163);
+            this.btTimMoi.Name = "btTimMoi";
+            this.btTimMoi.Size = new System.Drawing.Size(103, 26);
+            this.btTimMoi.TabIndex = 10;
+            this.btTimMoi.Text = "Tìm kiếm mới";
+            this.btTimMoi.UseVisualStyleBackColor = true;
+            this.btTimMoi.Click += new System.EventHandler(this.btTimMoi_Click);
             // 
             // frmTimNhanVien
             // 
@@ -262,5 +274,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView gridView;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btTimMoi;
     }
 }

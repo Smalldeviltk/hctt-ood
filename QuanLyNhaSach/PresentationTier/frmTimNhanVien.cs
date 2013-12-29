@@ -49,6 +49,17 @@ namespace PresentationTier
             gridView.DataSource = bus.TimTheoNgaySinh(ngaysinh);
         }
 
+        private void btTimMoi_Click(object sender, EventArgs e)
+        {
+            tbCMND.Text = "";
+            tbNam.Text = "";
+            tbTen.Text = "";
+
+            cbbNgay.SelectedIndex = 0;
+            cbbThang.SelectedIndex = 0;
+            gridView.DataSource = bus.LaydsNhanVien();
+        }
+
 
 
     }
