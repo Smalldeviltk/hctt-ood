@@ -10,7 +10,7 @@ using System.Collections;
 
 namespace DataAccessTier
 {
-    public class SachDAO : DAOHelper
+    public class SachDAO
     {
         private SqlDataAdapter da;
         private SqlConnection cnn;
