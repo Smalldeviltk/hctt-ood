@@ -33,7 +33,7 @@ namespace DataAccessTier
         public void Insert(NhanVien info)
         {
             cnn = helper.GetConnect();
-            sqlString = "Insert into NhanVien(id, Ten, NgaySinh, CMND, GioiTinh, SoDienThoai, DiaChi, Email, UserName, PassWord, Loai ) values ('" + info.id + "',N'" + info.Ten + "','" + info.NgaySinh + "','" + info.CMND + "','" + info.GioiTinh + "','" + info.SoDienThoai + "','" + info.DiaChi + "','" + info.Email + "','" + info.Username + "','" + info.Password + "','" + info.Loai + "')";
+            sqlString = "Insert into NhanVien(id, Ten, NgaySinh, CMND, GioiTinh, SoDienThoai, DiaChi, Email, UserName, PassWord, Loai ) values ('" + info.id + "',N'" + info.Ten + "','" + info.NgaySinh + "','" + info.CMND + "','" + info.GioiTinh + "','" + info.SoDienThoai + "','" + info.DiaChi + "','" + info.Email + "','" + info.Username + "','" + info.Password + "',N'" + info.Loai + "')";
 
             try
             {
@@ -82,7 +82,7 @@ namespace DataAccessTier
                  "',Email='" + info.Email +
                  "',UserName=N'" + info.Username +
                  "',PassWord=N'" + info.Password +
-                 "',Loai='N" + info.Loai +
+                 "',Loai=N'" + info.Loai +
                  "' WHERE id='" + info.id + "'";
             cnn = helper.GetConnect();
             try
