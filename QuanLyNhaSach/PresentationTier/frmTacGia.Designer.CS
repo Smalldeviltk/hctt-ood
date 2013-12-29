@@ -43,14 +43,14 @@
             this.btXoa = new System.Windows.Forms.Button();
             this.btCapNhat = new System.Windows.Forms.Button();
             this.gridView = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
             // 
             // btThem
             // 
             this.btThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btThem.Location = new System.Drawing.Point(137, 261);
+            this.btThem.Location = new System.Drawing.Point(137, 216);
             this.btThem.Margin = new System.Windows.Forms.Padding(4);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(100, 28);
@@ -63,7 +63,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(239, 61);
+            this.label1.Location = new System.Drawing.Point(236, 72);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 16);
@@ -73,7 +73,7 @@
             // tbTen
             // 
             this.tbTen.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbTen.Location = new System.Drawing.Point(310, 55);
+            this.tbTen.Location = new System.Drawing.Point(307, 66);
             this.tbTen.Name = "tbTen";
             this.tbTen.Size = new System.Drawing.Size(152, 22);
             this.tbTen.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 134);
+            this.label2.Location = new System.Drawing.Point(71, 117);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 16);
@@ -92,7 +92,7 @@
             // tbDiaChi
             // 
             this.tbDiaChi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbDiaChi.Location = new System.Drawing.Point(138, 128);
+            this.tbDiaChi.Location = new System.Drawing.Point(138, 111);
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(152, 22);
             this.tbDiaChi.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(378, 134);
+            this.label3.Location = new System.Drawing.Point(378, 117);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
@@ -111,7 +111,7 @@
             // tbDienThoai
             // 
             this.tbDienThoai.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbDienThoai.Location = new System.Drawing.Point(477, 128);
+            this.tbDienThoai.Location = new System.Drawing.Point(477, 111);
             this.tbDienThoai.Name = "tbDienThoai";
             this.tbDienThoai.Size = new System.Drawing.Size(152, 22);
             this.tbDienThoai.TabIndex = 6;
@@ -120,7 +120,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 188);
+            this.label4.Location = new System.Drawing.Point(71, 171);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 16);
@@ -131,7 +131,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(378, 188);
+            this.label5.Location = new System.Drawing.Point(378, 171);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 16);
@@ -141,7 +141,7 @@
             // tbEmail
             // 
             this.tbEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbEmail.Location = new System.Drawing.Point(138, 185);
+            this.tbEmail.Location = new System.Drawing.Point(138, 168);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(152, 22);
             this.tbEmail.TabIndex = 9;
@@ -149,7 +149,7 @@
             // tbGhiChu
             // 
             this.tbGhiChu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbGhiChu.Location = new System.Drawing.Point(477, 182);
+            this.tbGhiChu.Location = new System.Drawing.Point(477, 165);
             this.tbGhiChu.Name = "tbGhiChu";
             this.tbGhiChu.Size = new System.Drawing.Size(152, 22);
             this.tbGhiChu.TabIndex = 10;
@@ -157,7 +157,7 @@
             // btXoa
             // 
             this.btXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btXoa.Location = new System.Drawing.Point(307, 261);
+            this.btXoa.Location = new System.Drawing.Point(307, 216);
             this.btXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 28);
@@ -169,7 +169,7 @@
             // btCapNhat
             // 
             this.btCapNhat.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btCapNhat.Location = new System.Drawing.Point(477, 261);
+            this.btCapNhat.Location = new System.Drawing.Point(477, 216);
             this.btCapNhat.Margin = new System.Windows.Forms.Padding(4);
             this.btCapNhat.Name = "btCapNhat";
             this.btCapNhat.Size = new System.Drawing.Size(100, 28);
@@ -190,31 +190,34 @@
             this.gridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridView.Location = new System.Drawing.Point(12, 312);
+            this.gridView.Location = new System.Drawing.Point(12, 264);
             this.gridView.Name = "gridView";
             this.gridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridView.Size = new System.Drawing.Size(671, 237);
+            this.gridView.Size = new System.Drawing.Size(671, 268);
             this.gridView.TabIndex = 13;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_CellClick);
             this.gridView.SelectionChanged += new System.EventHandler(this.gridView_SelectionChanged);
             // 
-            // label6
+            // label7
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(307, 9);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 16);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Quản lý Tác Giả";
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label7.Location = new System.Drawing.Point(209, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(198, 31);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Quản lý Tác giả";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmTacGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(241)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(695, 561);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.btCapNhat);
             this.Controls.Add(this.btXoa);
@@ -257,6 +260,6 @@
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btCapNhat;
         private System.Windows.Forms.DataGridView gridView;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

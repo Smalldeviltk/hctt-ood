@@ -34,7 +34,7 @@
             this.btThem = new System.Windows.Forms.Button();
             this.tbTen = new System.Windows.Forms.TextBox();
             this.gridView = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(113, 51);
+            this.label1.Location = new System.Drawing.Point(113, 59);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 16);
@@ -88,7 +88,7 @@
             // tbTen
             // 
             this.tbTen.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbTen.Location = new System.Drawing.Point(234, 48);
+            this.tbTen.Location = new System.Drawing.Point(234, 56);
             this.tbTen.Name = "tbTen";
             this.tbTen.Size = new System.Drawing.Size(152, 22);
             this.tbTen.TabIndex = 16;
@@ -105,23 +105,26 @@
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_CellClick);
             this.gridView.SelectionChanged += new System.EventHandler(this.gridView_SelectionChanged);
             // 
-            // label2
+            // label7
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(220, 19);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 16);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Quản lý Thể loại";
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label7.Location = new System.Drawing.Point(168, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(207, 31);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Quản lý Thể loại";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmTheLoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(241)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(556, 327);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.tbTen);
             this.Controls.Add(this.btCapNhat);
@@ -148,6 +151,6 @@
         private System.Windows.Forms.Button btThem;
         private System.Windows.Forms.TextBox tbTen;
         private System.Windows.Forms.DataGridView gridView;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
     }
 }

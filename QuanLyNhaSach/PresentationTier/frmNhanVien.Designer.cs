@@ -56,6 +56,7 @@
             this.cbbThang = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tbNam = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -399,11 +400,26 @@
             this.tbNam.Size = new System.Drawing.Size(74, 22);
             this.tbNam.TabIndex = 30;
             // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label13.Location = new System.Drawing.Point(325, 9);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(243, 31);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Quản Lý Nhân Viên";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(241)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(903, 561);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.tbNam);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cbbThang);
@@ -474,5 +490,6 @@
         private System.Windows.Forms.ComboBox cbbThang;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox tbNam;
+        private System.Windows.Forms.Label label13;
     }
 }

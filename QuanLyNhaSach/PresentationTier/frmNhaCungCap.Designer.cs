@@ -42,14 +42,14 @@
             this.btXoa = new System.Windows.Forms.Button();
             this.btCapNhat = new System.Windows.Forms.Button();
             this.gridView = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
             // 
             // btThem
             // 
             this.btThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btThem.Location = new System.Drawing.Point(137, 261);
+            this.btThem.Location = new System.Drawing.Point(137, 205);
             this.btThem.Margin = new System.Windows.Forms.Padding(4);
             this.btThem.Name = "btThem";
             this.btThem.Size = new System.Drawing.Size(100, 28);
@@ -81,7 +81,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 134);
+            this.label2.Location = new System.Drawing.Point(71, 108);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 16);
@@ -91,7 +91,7 @@
             // tbDiaChi
             // 
             this.tbDiaChi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbDiaChi.Location = new System.Drawing.Point(138, 128);
+            this.tbDiaChi.Location = new System.Drawing.Point(138, 102);
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(152, 22);
             this.tbDiaChi.TabIndex = 4;
@@ -100,7 +100,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(378, 134);
+            this.label3.Location = new System.Drawing.Point(378, 108);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 16);
@@ -110,7 +110,7 @@
             // tbDienThoai
             // 
             this.tbDienThoai.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbDienThoai.Location = new System.Drawing.Point(477, 128);
+            this.tbDienThoai.Location = new System.Drawing.Point(477, 102);
             this.tbDienThoai.Name = "tbDienThoai";
             this.tbDienThoai.Size = new System.Drawing.Size(152, 22);
             this.tbDienThoai.TabIndex = 6;
@@ -119,7 +119,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 188);
+            this.label4.Location = new System.Drawing.Point(71, 162);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 16);
@@ -130,7 +130,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(378, 188);
+            this.label5.Location = new System.Drawing.Point(378, 162);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 16);
@@ -140,7 +140,7 @@
             // tbEmail
             // 
             this.tbEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbEmail.Location = new System.Drawing.Point(138, 185);
+            this.tbEmail.Location = new System.Drawing.Point(138, 159);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(152, 22);
             this.tbEmail.TabIndex = 9;
@@ -148,7 +148,7 @@
             // tbGhiChu
             // 
             this.tbGhiChu.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbGhiChu.Location = new System.Drawing.Point(477, 182);
+            this.tbGhiChu.Location = new System.Drawing.Point(477, 156);
             this.tbGhiChu.Name = "tbGhiChu";
             this.tbGhiChu.Size = new System.Drawing.Size(152, 22);
             this.tbGhiChu.TabIndex = 10;
@@ -156,7 +156,7 @@
             // btXoa
             // 
             this.btXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btXoa.Location = new System.Drawing.Point(307, 261);
+            this.btXoa.Location = new System.Drawing.Point(307, 205);
             this.btXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btXoa.Name = "btXoa";
             this.btXoa.Size = new System.Drawing.Size(100, 28);
@@ -168,7 +168,7 @@
             // btCapNhat
             // 
             this.btCapNhat.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btCapNhat.Location = new System.Drawing.Point(477, 261);
+            this.btCapNhat.Location = new System.Drawing.Point(477, 205);
             this.btCapNhat.Margin = new System.Windows.Forms.Padding(4);
             this.btCapNhat.Name = "btCapNhat";
             this.btCapNhat.Size = new System.Drawing.Size(100, 28);
@@ -182,31 +182,34 @@
             this.gridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.gridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridView.Location = new System.Drawing.Point(12, 312);
+            this.gridView.Location = new System.Drawing.Point(12, 253);
             this.gridView.Name = "gridView";
             this.gridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridView.Size = new System.Drawing.Size(671, 237);
+            this.gridView.Size = new System.Drawing.Size(671, 296);
             this.gridView.TabIndex = 13;
             this.gridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_CellClick);
             this.gridView.SelectionChanged += new System.EventHandler(this.gridView_SelectionChanged);
             // 
-            // label6
+            // label7
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(291, 9);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 16);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Quản lý Nhà cung cấp";
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label7.Location = new System.Drawing.Point(260, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(185, 31);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Nhà Cung Cấp";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(241)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(695, 561);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.gridView);
             this.Controls.Add(this.btCapNhat);
             this.Controls.Add(this.btXoa);
@@ -249,6 +252,6 @@
         private System.Windows.Forms.Button btXoa;
         private System.Windows.Forms.Button btCapNhat;
         private System.Windows.Forms.DataGridView gridView;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
