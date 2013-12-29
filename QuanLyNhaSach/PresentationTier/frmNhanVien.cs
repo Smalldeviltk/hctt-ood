@@ -120,6 +120,11 @@ namespace PresentationTier
         private void btXoa_Click(object sender, EventArgs e)
         {
             string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
+            if(cbbLoai.SelectedItem.ToString().Equals("Quản lý"))
+            {
+                MessageBox.Show("Nhân viên quản lý không được xóa");
+                return;
+            }
             bus.Delete(id);
             loadData();
             MessageBox.Show("Xóa thành công");

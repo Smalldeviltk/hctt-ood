@@ -17,6 +17,7 @@ namespace PresentationTier
         TaoMa ma = new TaoMa();
         TheLoaiBUS bus = new TheLoaiBUS();
         TheLoai data = new TheLoai();
+        SachBUS sbus = new SachBUS();
         public frmTheLoai()
         {
             InitializeComponent();
@@ -60,6 +61,15 @@ namespace PresentationTier
         private void btXoa_Click(object sender, EventArgs e)
         {
             string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
+            ArrayList dsma = sbus.LaydsMaTheLoai();
+            for (int i = 0; i < dsma.Count; i++)
+            {
+                if (id.Equals(dsma[i]))
+                {
+                    MessageBox.Show("Còn tồn tại sách có thể loại vừa chọn, không được xóa!");
+                    return;
+                }
+            }
             bus.Delete(id);
             loadData();
             MessageBox.Show("Xóa thành công");

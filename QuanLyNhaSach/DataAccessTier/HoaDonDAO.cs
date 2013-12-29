@@ -55,5 +55,27 @@ namespace DataAccessTier
             return mamax;
         }
 
+        public ArrayList LaydsMa()
+        {
+            ArrayList ds = new ArrayList();
+            cnn = helper.GetConnect();
+            sqlString = "  SELECT MaSach FROM  CHITIETHOADON";
+            cmd = new SqlCommand(sqlString, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    ds.Add(dr["MaSach"].ToString());
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong add vao mang Array đc.");
+                }
+            }
+            return ds;
+        }
+
     }
 }

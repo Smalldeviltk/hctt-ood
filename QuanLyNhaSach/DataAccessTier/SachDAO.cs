@@ -151,6 +151,72 @@ namespace DataAccessTier
             return mamax;
         }
 
+        public ArrayList LaydsMaNCC()
+        {
+            ArrayList ds = new ArrayList();
+            cnn = helper.GetConnect();
+            sqlString = "  SELECT MaNhaCungCap FROM  Sach";
+            cmd = new SqlCommand(sqlString, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    ds.Add(dr["MaNhaCungCap"].ToString());
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong add vao mang Array đc.");
+                }
+            }
+            return ds;
+        }
+
+        public ArrayList LaydsMaNXB()
+        {
+            ArrayList ds = new ArrayList();
+            cnn = helper.GetConnect();
+            sqlString = "  SELECT MaNhaXuatBan FROM  Sach";
+            cmd = new SqlCommand(sqlString, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    ds.Add(dr["MaNhaXuatBan"].ToString());
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong add vao mang Array đc.");
+                }
+            }
+            return ds;
+        }
+
+        public ArrayList LaydsMaTheLoai()
+        {
+            ArrayList ds = new ArrayList();
+            cnn = helper.GetConnect();
+            sqlString = "  SELECT MaTheLoai FROM  Sach";
+            cmd = new SqlCommand(sqlString, cnn);
+            dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                try
+                {
+                    ds.Add(dr["MaTheLoai"].ToString());
+                }
+                catch (System.Exception e)
+                {
+                    cnn.Close();
+                    throw new Exception("Khong add vao mang Array đc.");
+                }
+            }
+            return ds;
+        }
+
         public DataTable TimSachTheoTen(string tensach)
         {
             dttable = new DataTable();

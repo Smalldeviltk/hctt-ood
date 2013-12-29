@@ -14,6 +14,7 @@ namespace PresentationTier
         TaoMa ma = new TaoMa();
         NhaXuatBanBUS bus = new NhaXuatBanBUS();
         NhaXuatBan data = new NhaXuatBan();
+        SachBUS sbus = new SachBUS();
         public frmNhaXuatBan()
         {
             InitializeComponent();
@@ -67,6 +68,15 @@ namespace PresentationTier
         private void btXoa_Click(object sender, EventArgs e)
         {
             string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
+            ArrayList dsma = sbus.LayDsMaNXB();
+            for (int i = 0; i < dsma.Count; i++)
+            {
+                if (id.Equals(dsma[i]))
+                {
+                    MessageBox.Show("Tồn tại sách của nhà xuất bản, không được xóa!");
+                    return;
+                }
+            }
             bus.Delete(id);
             loadData();
             MessageBox.Show("Xóa thành công");

@@ -16,6 +16,7 @@ namespace PresentationTier
         TaoMa ma = new TaoMa();
         TacGiaBUS bus = new TacGiaBUS();
         TacGia data = new TacGia();
+        SachTacGiaBus stgbus = new SachTacGiaBus();
         public frmTacGia()
         {
             InitializeComponent();
@@ -73,6 +74,15 @@ namespace PresentationTier
         private void btXoa_Click(object sender, EventArgs e)
         {
             string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
+            ArrayList dsma = stgbus.LayDsMa();
+            for (int i = 0; i<dsma.Count; i++)
+            {
+                if (id.Equals(dsma[i]))
+                {
+                    MessageBox.Show("Tồn tại sách của tác giả, không được xóa!");
+                    return;
+                }
+            }
             bus.Delete(id);
             loadData();
             MessageBox.Show("Xóa thành công");

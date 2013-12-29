@@ -33,6 +33,10 @@ namespace BusinessLogicTier
         {
             return stgD.LayMaMax();
         }
+        public ArrayList LayDsMa()
+        {
+            return stgD.LaydsMa();
+        }
 
     }
 
