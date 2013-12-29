@@ -43,6 +43,8 @@ namespace PresentationTier
             f.Dock = DockStyle.Fill;
             panelFrm.Controls.Add(f);
             f.Show();
+            //btnBanHang_Click(sender, e);
+            //bánHàngToolStripMenuItem_Click(null, null);
         }
 
         public void CheckAuth()
@@ -50,24 +52,31 @@ namespace PresentationTier
             if (Auth.logged != null)
             {
                 dangNhapToolStripMenuItem.Enabled = false;
-                dangXuatToolStripMenuItem.Enabled = true;
-                thongTinTaiKhoanToolStripMenuItem.Enabled = true;
+                dangXuatToolStripMenuItem.Enabled = true;       
                 quanLyToolStripMenuItem.Enabled = true;
                 timKiemNhanVienToolStripMenuItem.Enabled = true;
-                thayDoiQuiDinhToolStripMenuItem.Enabled = true;
                 kinhDoanhToolStripMenuItem.Enabled = true;
                 baoCaoToolStripMenuItem.Enabled = true;
+                btnTimKiem.Enabled = true;
+                btnBanHang.Enabled = true;
+                btnQLSach.Enabled = true;
+                btnNhapHang.Enabled = true;
+                lblName.Text = Auth.logged.Ten;
+                lblNgaySinh.Text = Auth.logged.NgaySinh;
+                lblUsername.Text = Auth.logged.Username;
             }
             else
             {
                 dangNhapToolStripMenuItem.Enabled = true;
                 dangXuatToolStripMenuItem.Enabled = false;
-                thongTinTaiKhoanToolStripMenuItem.Enabled = false;
                 quanLyToolStripMenuItem.Enabled = false;
                 timKiemNhanVienToolStripMenuItem.Enabled = false;
-                thayDoiQuiDinhToolStripMenuItem.Enabled = false;
                 kinhDoanhToolStripMenuItem.Enabled = false;
                 baoCaoToolStripMenuItem.Enabled = false;
+                btnTimKiem.Enabled = true;
+                btnBanHang.Enabled = false;
+                btnQLSach.Enabled = false;
+                btnNhapHang.Enabled = false;
             }
         }
 
@@ -224,6 +233,31 @@ namespace PresentationTier
         private void thayDoiQuiDinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            tìmKiếmSáchToolStripMenuItem_Click(sender, e);
+        }
+
+        private void btnBanHang_Click(object sender, EventArgs e)
+        {
+            bánHàngToolStripMenuItem_Click(sender, e);
+        }
+
+        private void btnNhapHang_Click(object sender, EventArgs e)
+        {
+            nhậpHàngToolStripMenuItem_Click(sender, e);
+        }
+
+        private void btnQLSach_Click(object sender, EventArgs e)
+        {
+            sáchToolStripMenuItem_Click(sender, e);
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 

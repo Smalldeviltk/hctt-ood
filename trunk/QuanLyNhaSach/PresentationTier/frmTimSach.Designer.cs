@@ -295,16 +295,20 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(356, 19);
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label8.Location = new System.Drawing.Point(300, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 16);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Tìm kiếm sách";
+            this.label8.Size = new System.Drawing.Size(185, 31);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Tìm kiếm Sách";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // frmTimSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(241)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(820, 468);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.gridView);
