@@ -77,6 +77,9 @@ namespace PresentationTier
                 btnBanHang.Enabled = false;
                 btnQLSach.Enabled = false;
                 btnNhapHang.Enabled = false;
+                lblName.Text = "Chưa đăng nhập";
+                lblNgaySinh.Text = "";
+                lblUsername.Text = "";
             }
         }
 
@@ -85,6 +88,7 @@ namespace PresentationTier
             Auth.logged = null;
             CheckAuth();
             panelFrm.Controls.Clear();
+
         }
 
         private void tácGiảToolStripMenuItem_Click(object sender, EventArgs e)

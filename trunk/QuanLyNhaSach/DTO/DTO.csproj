@@ -46,7 +46,6 @@
     <Compile Include="NhanVien.cs" />
     <Compile Include="NhaXuatBan.cs" />
     <Compile Include="PhieuNhap.cs" />
-    <Compile Include="QuiDinh.cs" />
     <Compile Include="Sach.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SachTacGia.cs" />
