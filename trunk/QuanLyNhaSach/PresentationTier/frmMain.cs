@@ -49,7 +49,7 @@ namespace PresentationTier
 
         public void CheckAuth()
         {
-            if (Auth.logged != null)
+            if (Auth.logged != null && Auth.logged.Loai == "Quản lý")
             {
                 dangNhapToolStripMenuItem.Enabled = false;
                 dangXuatToolStripMenuItem.Enabled = true;       
@@ -63,7 +63,25 @@ namespace PresentationTier
                 btnNhapHang.Enabled = true;
                 lblName.Text = Auth.logged.Ten;
                 lblNgaySinh.Text = Auth.logged.NgaySinh;
-                lblUsername.Text = Auth.logged.Username;
+                lblUsername.Text = Auth.logged.Loai;
+                btnDangXuat.Enabled = true;
+            }
+            else if (Auth.logged != null && Auth.logged.Loai == "Nhân viên")
+            {
+                dangNhapToolStripMenuItem.Enabled = false;
+                dangXuatToolStripMenuItem.Enabled = true;
+                quanLyToolStripMenuItem.Enabled = false;
+                timKiemNhanVienToolStripMenuItem.Enabled = false;
+                kinhDoanhToolStripMenuItem.Enabled = true;
+                baoCaoToolStripMenuItem.Enabled = false;
+                btnTimKiem.Enabled = true;
+                btnBanHang.Enabled = true;
+                btnQLSach.Enabled = false;
+                btnNhapHang.Enabled = true;
+                lblName.Text = Auth.logged.Ten;
+                lblNgaySinh.Text = Auth.logged.NgaySinh;
+                lblUsername.Text = Auth.logged.Loai;
+                btnDangXuat.Enabled = true;
             }
             else
             {
@@ -80,6 +98,7 @@ namespace PresentationTier
                 lblName.Text = "Chưa đăng nhập";
                 lblNgaySinh.Text = "";
                 lblUsername.Text = "";
+                btnDangXuat.Enabled = false;
             }
         }
 
@@ -262,6 +281,11 @@ namespace PresentationTier
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            dangXuatToolStripMenuItem_Click(sender, e);
         }
 
 
