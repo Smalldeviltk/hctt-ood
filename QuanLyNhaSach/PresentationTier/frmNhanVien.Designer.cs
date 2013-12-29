@@ -259,9 +259,8 @@
             this.cbbLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbLoai.FormattingEnabled = true;
             this.cbbLoai.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C"});
+            "Quản lý",
+            "Nhân viên"});
             this.cbbLoai.Location = new System.Drawing.Point(558, 200);
             this.cbbLoai.Name = "cbbLoai";
             this.cbbLoai.Size = new System.Drawing.Size(152, 24);
