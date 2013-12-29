@@ -16,7 +16,7 @@ namespace PresentationTier
         TaoMa ma = new TaoMa();
         NhaCungCapBUS bus = new NhaCungCapBUS();
         NhaCungCap data = new NhaCungCap();
-
+        SachBUS sbus = new SachBUS();
         public frmNhaCungCap()
         {
             InitializeComponent();
@@ -64,6 +64,15 @@ namespace PresentationTier
         private void btXoa_Click(object sender, EventArgs e)
         {
             string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
+            ArrayList dsma = sbus.LayDsMaNCC();
+            for (int i = 0; i < dsma.Count; i++)
+            {
+                if (id.Equals(dsma[i]))
+                {
+                    MessageBox.Show("Tồn tại sách của nhà cung cấp, không được xóa!");
+                    return;
+                }
+            }
             bus.Delete(id);
             loadData();
             MessageBox.Show("Xóa thành công");

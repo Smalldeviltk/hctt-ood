@@ -22,6 +22,8 @@ namespace PresentationTier
         SachBUS bus = new SachBUS();
         Sach data = new Sach();
         SachTacGia stgdata = new SachTacGia();
+        HoaDonBUS hdbus = new HoaDonBUS();
+        PhieuNhapBUS pnbus = new PhieuNhapBUS();
         public frmSach()
         {
             InitializeComponent();
@@ -216,6 +218,24 @@ namespace PresentationTier
         private void btXoa_Click(object sender, EventArgs e)
         {
             string id = gridView.Rows[gridView.CurrentRow.Index].Cells[0].Value.ToString();
+            ArrayList dsmahd = hdbus.LaydsMa();
+            for (int i = 0; i < dsmahd.Count; i++)
+            {
+                if (id.Equals(dsmahd[i]))
+                {
+                    MessageBox.Show("Sách tồn tại trong hóa đơn, không được xóa!");
+                    return;
+                }
+            }
+            ArrayList dsmasct = pnbus.LaydsMaSach();
+            for (int i = 0; i < dsmasct.Count; i++)
+            {
+                if (id.Equals(dsmasct[i]))
+                {
+                    MessageBox.Show("Sách tồn tại trong phiếu nhập, không được xóa!");
+                    return;
+                }
+            }
             stgbus.Delete(id);
             bus.Delete(id);
             MessageBox.Show("Xóa thành công");

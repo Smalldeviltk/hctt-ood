@@ -38,6 +38,18 @@ namespace BusinessLogicTier
         {
             return sD.LayMaMax();
         }
+        public ArrayList LayDsMaNCC()
+        {
+            return sD.LaydsMaNCC();
+        }
+        public ArrayList LayDsMaNXB()
+        {
+            return sD.LaydsMaNXB();
+        }
+        public ArrayList LaydsMaTheLoai()
+        {
+            return sD.LaydsMaTheLoai();
+        }
         public DataTable TimSachTheoTen(string tensach)
         {
             return sD.TimSachTheoTen(tensach);

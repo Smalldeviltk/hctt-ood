@@ -79,7 +79,6 @@ namespace DataAccessTier
                 throw new Exception("Lỗi Kết Nối Cơ sở dữ liệu.");
             }
             cnn.Close();
-
         }
 
         public void Update(TacGia info)

@@ -14,6 +14,7 @@ namespace DataAccessTier
     {
         private static SqlConnection cnn;
         private static SqlDataReader dr;
+        private SqlCommand cmd;
         static DAOHelper helper = new DAOHelper();
         public static DataTable TimSach(string str)
         {
@@ -122,5 +123,7 @@ namespace DataAccessTier
             cmd.Parameters.AddWithValue("@SoLuong", m.SoLuong);
             cmd.ExecuteNonQuery();
         }
+
+        
     }
 }
